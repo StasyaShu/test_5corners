@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Тестовое задание на вакансию HTML-верстальщик: Выполнила Шулепова С.В.">
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- <link rel="preload" href="fonts/helvetica.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/helvetica-bold.woff2" as="font" crossorigin> -->
+  <script defer src="js/vendor/jquery-3.6.1.min.js"></script>
+  <title>Тестовое задание от компании 5 углов.</title>
+</head>
+
+<body id="body">
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <nav class="header__nav navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link" aria-label="Переход на страницу каталога">Каталог</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link" aria-label="Переход в раздел о компании">О компании</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link" aria-label="Переход в раздел с магазинами компании">Магазины</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__logo">
+          <a class="header__logo-link">
+            <img src="img/icon-logo.svg" width="100" height="22" alt="Логотип компании">
+          </a>
+        </div>
+        <ul class="header__tools tools">
+          <li class="tools__item tools__item--search">
+            <input type="text" id="search-id">
+            <label for="search-id"></label>
+            <a href="#" class="tools__link" aria-label="Нажать для поиска">
+              <img src="img/icon-search.svg" width="17" height="17" alt="Иконка лупа">
+            </a>
+          </li>
+          <li class="tools__item tools__item--account">
+            <a href="#" class="tools__link" aria-label="Переход в личный кабинет">
+              <img src="img/icon-account.svg" width="18" height="18" alt="Иконка человек">
+            </a>
+          </li>
+          <li class="tools__item tools__item--favourite">
+            <a href="#" class="tools__link" aria-label="Переход в избранное">
+              <img src="img/icon-heart.svg" width="17" height="15" alt="Иконка сердце">
+            </a>
+            <span>8</span>
+          </li>
+          <li class="tools__item tools__item--bag">
+            <a href="#" class="tools__link" aria-label="Переход в корзину">
+              <img src="img/icon-bag.svg" width="18" height="16" alt="Иконка корзину">
+            </a>
+            <span>4</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Онлайн-магазин. Оформление заказа.</h1>
+    <div class="order">
+      <div class="container">
+        <div class="order__wrapper">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link" aria-label="Ссылка-переход на главную">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link readcrumbs__link--active" aria-label="Оформление заказа">Оформление заказа</a>
+              </li>
+            </ul>
+          </div>
+          <h2 class="order__title">Оформление заказа</h2>
+          <div class="order__account">
+            <p class="order__have-account">Есть аккаунт?</p>
+            <a href="#" class="order__account-link" aria-label="Войти в личный кабинет">Войти</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+  <footer class="footer">
+
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

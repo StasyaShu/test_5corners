@@ -1,0 +1,20 @@
+@import "variables";
+
+// General
+
+@import "general/global";
+@import "general/fonts";
+@import "general/mixins";
+
+// Global
+
+@import "global/container";
+
+// Blocks
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/navigation";
+@import "blocks/tools";
+@import "blocks/order";
+@import "blocks/breadcrumbs";
