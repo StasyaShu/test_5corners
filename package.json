@@ -13,8 +13,6 @@
     "eslint": "4.16.0",
     "eslint-config-htmlacademy": "0.4.x",
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-minify": "^3.1.0",
@@ -26,15 +24,15 @@
     "gulp-svgstore": "^8.0.0",
     "gulp-terser": "^2.0.1",
     "gulp-webp": "^4.0.1",
-    "node-normalize-scss": "^8.1.2",
     "postcss": "^8.4.4",
     "postcss-csso": "^5.0.1",
-    "rollup-stream": "^1.24.1",
     "sass": "^1.38.2",
     "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "^0.1.12",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "gulp-fonter": "^0.3.0",
+    "gulp-ttf2woff2": "^4.0.1",
+    "webpack": "^5.73.0",
+    "webpack-stream": "^7.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -43,7 +41,7 @@
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
     "fix": "eslint --fix ./source/js && stylelint --fix ./source/sass/",
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build --build"
   },
   "browserslist": [
     "last 2 versions",
@@ -57,9 +55,5 @@
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.scss"
-  ],
-  "dependencies": {
-    "normalize-scss": "^7.0.1",
-    "swiper": "^8.0.6"
-  }
+  ]
 }

@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const fonter = require('gulp-fonter');
+const ttf2woff2 = require('gulp-ttf2woff2');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
@@ -6,14 +8,12 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const rename = require('gulp-rename');
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
-const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const browserSync = require('browser-sync');
+const webpack = require('webpack-stream')
 
 // Styles
 
@@ -43,27 +43,40 @@ exports.html = html;
 // Scripts
 
 const scripts = () => gulp.src('source/js/**/*.js')
-  .pipe(buffer())
-  .pipe(babel({
-    presets: ['@babel/preset-env']
+  .pipe(plumber())
+  .pipe(webpack({
+    mode: process.argv.includes('--build') ? 'production' : 'development',
+    output: {
+      filename: 'main.min.js',
+    }
   }))
   .pipe(gulp.dest('build/js'))
   .pipe(browserSync.stream());
 
 exports.scripts = scripts;
 
-// To vendor.js
+// Fonts
 
-const vendorJS = () => gulp.src('node_modules/swiper/swiper-bundle.js')
-  .pipe(buffer())
-  .pipe(babel({
-    presets: ['@babel/preset-env']
+const otfToTtf = () => gulp.src('source/fonts/*.otf')
+  .pipe(plumber())
+  .pipe(fonter({
+    formats: ['ttf']
   }))
-  .pipe(concat('vendor.js'))
-  .pipe(gulp.dest('build/js'))
-  .pipe(browserSync.stream());
+  .pipe(gulp.dest('source/fonts'));
 
-exports.vendorJS = vendorJS;
+exports.otfToTtf = otfToTtf;
+
+const ttfToWoff = () => gulp.src('source/fonts/*.ttf')
+  .pipe(plumber())
+  .pipe(fonter({
+    formats: ['woff']
+  }))
+  .pipe(gulp.dest('build/fonts'))
+  .pipe(gulp.src('source/fonts/*.ttf'))
+  .pipe(ttf2woff2())
+  .pipe(gulp.dest('build/fonts'));
+
+exports.ttfToWoff = ttfToWoff;
 
 // Images
 
@@ -160,7 +173,7 @@ exports.reload = reload;
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.{scss, sass}', gulp.series(styles, reload));
-  gulp.watch('source/js/*.js', gulp.series(scripts, vendorJS, reload));
+  gulp.watch('source/js/*.js', gulp.series(scripts, reload));
   gulp.watch('source/*.html', gulp.series(html, reload));
 };
 
@@ -170,13 +183,14 @@ exports.watcher = watcher;
 
 exports.build = gulp.series(
   clean,
+  otfToTtf,
+  ttfToWoff,
   copy,
   images,
   gulp.parallel(
     styles,
     html,
     scripts,
-    vendorJS,
     sprite,
     createWebp,
   ),
@@ -186,6 +200,8 @@ exports.build = gulp.series(
 
 exports.default = gulp.series(
   clean,
+  otfToTtf,
+  ttfToWoff,
   copy,
   images,
   gulp.parallel(
@@ -194,7 +210,6 @@ exports.default = gulp.series(
     sprite,
     createWebp,
     scripts,
-    vendorJS,
   ),
   gulp.series(
     server,

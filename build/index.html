@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Тестовое задание на вакансию HTML-верстальщик: Выполнила Шулепова С.В.">
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- <link rel="preload" href="fonts/helvetica.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/helvetica-bold.woff2" as="font" crossorigin> -->
+  <link rel="preload" href="fonts/helvetica.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/helvetica-bold.woff2" as="font" crossorigin>
   <script defer src="js/vendor/jquery-3.6.1.min.js"></script>
   <title>Тестовое задание от компании 5 углов.</title>
 </head>
@@ -65,29 +65,132 @@
   </header>
   <main>
     <h1 class="visually-hidden">Онлайн-магазин. Оформление заказа.</h1>
-    <div class="order">
-      <div class="container">
+    <div class="container">
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__wrapper">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link" aria-label="Ссылка-переход на главную">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link readcrumbs__link--active" aria-label="Оформление заказа">Оформление
+                заказа</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="order">
         <div class="order__wrapper">
-          <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link" aria-label="Ссылка-переход на главную">Главная</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link readcrumbs__link--active" aria-label="Оформление заказа">Оформление заказа</a>
-              </li>
-            </ul>
-          </div>
-          <h2 class="order__title">Оформление заказа</h2>
-          <div class="order__account">
+          <div class="order__header">
+            <h2 class="order__title">Оформление заказа</h2>
             <p class="order__have-account">Есть аккаунт?</p>
             <a href="#" class="order__account-link" aria-label="Войти в личный кабинет">Войти</a>
           </div>
+          <div class="order__goods">
+            <b class="order__title"><span>3</span>товара на сумму <span>25 000</span> &#8381;</b>
+            <div class="order__cards cards">
+              <ul class="cards__list">
+                <li class="cards__item card">
+                  <div class="card__wrapper">
+                    <button type="button" class="button button--close"></button>
+                    <figure>
+                      <picture>
+                        <source type="image/webp" media="(max-width:767)" srcset="img/img-jacket-mobile@1x.webp 1x, img/img-jacket-mobile@2x.webp 2x">
+                        <img src="img/img-jacket-desktop@1x.jpg" srcset="img/img-jacket-desktop@2x.jpg 2x" width="130" height="160" alt="Утепленная стеганная куртка женская Top Hills">
+                      </picture>
+                      <figcaption>Утепленная стеганная куртка женская Top Hills</figcaption>
+                    </figure>
+                    <div class="card__info">
+                      <p>Артикул <span>512-05</span></p>
+                      <p>Сезон <span>Осень-зима</span></p>
+                      <ul class="card__measures size">
+                        <li class="size__item">xs</li>
+                        <li class="size__item">s</li>
+                        <li class="size__item size__item--active">m</li>
+                        <li class="size__item">l</li>
+                        <li class="size__item">xl</li>
+                      </ul>
+                      <ul class="card__colors color">
+                        <li class="color__item color__item--black color__item--active"></li>
+                        <li class="color__item color__item--blue"></li>
+                        <li class="color__item color__item--brown"></li>
+                      </ul>
+                    </div>
+                    <div class="card__price">
+                      <p><span>10 000</span> &#8381;</p>
+                      <div class="quantity">
+                        <button type="button button--reduce"></button>
+                        <span>2</span>
+                        <button type="button button--add"></button>
+                      </div>
+                      <p><span>20 000</span> &#8381;</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item card card--deleted">
+                  <div class="card__wrapper">
+                    <button type="button" class="button button--close"></button>
+                    <p>Товар <span>Наименование товара</span> был удален из корзины.</p>
+                    <a href="#" aria-label="Восстановить товар из корзины">Восстановить</a>
+                  </div>
+                </li>
+                <li class="cards__item card">
+                  <div class="card__wrapper">
+                    <button type="button" class="button button--close"></button>
+                    <figure>
+                      <picture>
+                        <source type="image/webp" media="(max-width:767)" srcset="img/img-hat-mobile@1x.webp 1x, img/img-hat-mobile@2x.webp 2x">
+                        <img src="img/img-hat-desktop@1x.jpg" srcset="img/img-hat-desktop@2x.jpg 2x" width="130" height="160" alt="Вязанная шапка Zolla">
+                      </picture>
+                      <figcaption>Вязанная шапка Zolla</figcaption>
+                    </figure>
+                    <div class="card__info">
+                      <p>Артикул <span>891-256</span></p>
+                      <p>Сезон <span>Демисезон</span></p>
+                      <ul class="card__measures size">
+                        <li class="size__item">xs</li>
+                        <li class="size__item size__item--active">s</li>
+                        <li class="size__item ">m</li>
+                        <li class="size__item size__item--unavailable">l</li>
+                        <li class="size__item size__item--unavailable">xl</li>
+                      </ul>
+                      <ul class="card__colors color">
+                        <li class="color__item color__item--black color__item--active"></li>
+                      </ul>
+                    </div>
+                    <div class="card__price">
+                      <p><span>500</span> &#8381;</p>
+                      <div class="quantity">
+                        <button type="button button--reduce"></button>
+                        <span>1</span>
+                        <button type="button button--add"></button>
+                      </div>
+                      <p><span>500</span> &#8381;</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="order__total total">
+              <div class="total__wrapper">
+                <table>
+                  <tr><td>Товары</td><td>24 500 &#8381;</td></tr>
+                  <tr><td>Скидка</td><td>- 4 500 &#8381;</td></tr>
+                  <tr><td>Акции</td><td>- 4 000 &#8381;</td></tr>
+                  <tr><td>Промокод</td><td>- 500 &#8381;</td></tr>
+                  <tr><td>Доставка</td><td>200 &#8381;</td></tr>
+                </table>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
-      </div>
+      </section>
+
     </div>
-
-
   </main>
   <footer class="footer">
 
