@@ -66,9 +66,10 @@
             <span>4</span>
           </li>
         </ul>
-        <button class="header__button burger-button" type="button"><span class="visually-hidden">Открыть мобильное меню</span>
+        <button class="header__button burger-button" type="button"><span class="visually-hidden">Открыть мобильное
+            меню</span>
           <svg width="32" height="11" viewBox="0 0 32 11">
-          <use xlink:href="img/sprite.svg#icon-burger-menu"></use>
+            <use xlink:href="img/sprite.svg#icon-burger-menu"></use>
           </svg>
 
         </button>
@@ -105,18 +106,16 @@
                 <li class="cards__item card">
                   <div class="card__wrapper">
                     <button type="button" class="button button--close"></button>
-                    <figure>
-                      <picture>
-                        <source type="image/webp" media="(max-width:767)"
-                          srcset="img/img-jacket-mobile@1x.webp 1x, img/img-jacket-mobile@2x.webp 2x">
-                        <img src="img/img-jacket-desktop@1x.jpg" srcset="img/img-jacket-desktop@2x.jpg 2x" width="130"
-                          height="160" alt="Утепленная стеганная куртка женская Top Hills">
-                      </picture>
-                      <figcaption>Утепленная стеганная куртка женская Top Hills</figcaption>
-                    </figure>
+                    <picture>
+                      <source type="image/webp" media="(max-width:767)"
+                        srcset="img/img-jacket-mobile@1x.webp 1x, img/img-jacket-mobile@2x.webp 2x">
+                      <img src="img/img-jacket-desktop@1x.jpg" srcset="img/img-jacket-desktop@2x.jpg 2x" width="130"
+                        height="160" alt="Утепленная стеганная куртка женская Top Hills">
+                    </picture>
+                    <b class="card__title">Утепленная стеганная куртка женская Top Hills</b>
                     <div class="card__info">
-                      <p>Артикул <span>512-05</span></p>
-                      <p>Сезон <span>Осень-зима</span></p>
+                      <p class="card__description">Артикул <span>512-05</span></p>
+                      <p class="card__description">Сезон <span>Осень-зима</span></p>
                       <ul class="card__measures size">
                         <li class="size__item">xs</li>
                         <li class="size__item">s</li>
@@ -125,9 +124,18 @@
                         <li class="size__item">xl</li>
                       </ul>
                       <ul class="card__colors color">
-                        <li class="color__item color__item--black color__item--active"></li>
-                        <li class="color__item color__item--blue"></li>
-                        <li class="color__item color__item--brown"></li>
+                        <li class="color__item">
+                          <input class="visually-hidden radio radio--black" type="radio" name="color" id="black" checked>
+                          <label for="black"></label>
+                        </li>
+                        <li class="color__item">
+                          <input class="visually-hidden radio radio--blue" type="radio" name="color" id="blue">
+                          <label for="blue"></label>
+                        </li>
+                        <li class="color__item">
+                          <input class="visually-hidden radio radio--brown" type="radio" name="color" id="brown">
+                          <label for="brown"></label>
+                        </li>
                       </ul>
                     </div>
                     <div class="card__price">
@@ -151,15 +159,13 @@
                 <li class="cards__item card">
                   <div class="card__wrapper">
                     <button type="button" class="button button--close"></button>
-                    <figure>
-                      <picture>
-                        <source type="image/webp" media="(max-width:767)"
-                          srcset="img/img-hat-mobile@1x.webp 1x, img/img-hat-mobile@2x.webp 2x">
-                        <img src="img/img-hat-desktop@1x.jpg" srcset="img/img-hat-desktop@2x.jpg 2x" width="130"
-                          height="160" alt="Вязанная шапка Zolla">
-                      </picture>
-                      <figcaption>Вязанная шапка Zolla</figcaption>
-                    </figure>
+                    <picture>
+                      <source type="image/webp" media="(max-width:767)"
+                        srcset="img/img-hat-mobile@1x.webp 1x, img/img-hat-mobile@2x.webp 2x">
+                      <img src="img/img-hat-desktop@1x.jpg" srcset="img/img-hat-desktop@2x.jpg 2x" width="130"
+                        height="160" alt="Вязанная шапка Zolla">
+                    </picture>
+                    <b class="card__title">Вязанная шапка Zolla</b>
                     <div class="card__info">
                       <p>Артикул <span>891-256</span></p>
                       <p>Сезон <span>Демисезон</span></p>
