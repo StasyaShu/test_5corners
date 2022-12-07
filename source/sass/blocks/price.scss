@@ -1,0 +1,39 @@
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__old {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-dim-gray;
+    text-decoration: line-through;
+  }
+
+  &__now {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-black;
+    max-width: 80px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

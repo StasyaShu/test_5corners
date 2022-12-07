@@ -6,6 +6,10 @@
   align-items: center;
   flex-wrap: wrap;
 
+  @include mobile {
+    margin: 0 0 16px;
+  }
+
   &__item:not(:last-child) {
     margin: 0 5px 0 0;
   }

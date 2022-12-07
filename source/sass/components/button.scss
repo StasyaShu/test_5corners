@@ -1,0 +1,64 @@
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &--close {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1.5px;
+      background-color: $color-black;
+      transform: rotate(45deg);
+      top: 0;
+      left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 1.5px;
+      background-color: $color-black;
+      transform: rotate(-45deg);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &--reduce {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 1.5px;
+      background-color: $color-black;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &--add {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 1.5px;
+      background-color: $color-black;
+      top: 0;
+      left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 1.5px;
+      background-color: $color-black;
+      transform: rotate(90deg);
+      top: 0;
+      left: 0;
+    }
+  }
+}
