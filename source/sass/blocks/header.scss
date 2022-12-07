@@ -1,0 +1,47 @@
+.header {
+  border-bottom: 1px solid $color-very-light-grey;
+  background-color: $color-white;
+
+  @include mobile {
+    border-bottom: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0 22px;
+
+    @include mobile {
+      z-index: 2;
+    }
+  }
+
+  &__logo {
+    margin: 0 0 3px 0;
+  }
+
+  &__nav {
+    @include mobile {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: transform $trans-08, height $trans-08, opacity $trans-08;
+      z-index: -1;
+    }
+  }
+
+  &__tools {
+    margin: 0 0 0 15px;
+    padding: 0;
+
+    @include mobile {
+      margin:0 24px 0 auto;
+    }
+  }
+}
