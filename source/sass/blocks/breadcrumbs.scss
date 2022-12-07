@@ -1,0 +1,53 @@
+.breadcrumbs {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 50px 0 40px;
+
+    @include mobile {
+      padding: 22px 0 32px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    position: relative;
+
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 0;
+    }
+
+    a {
+      color: $color-dim-gray;
+    }
+  }
+
+  &__item {
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+
+    a {
+      color: $color-black;
+      font-weight: 500;
+    }
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
