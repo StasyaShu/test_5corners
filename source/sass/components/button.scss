@@ -13,6 +13,10 @@
       transform: rotate(45deg);
       top: 0;
       left: 0;
+
+      @include mobile {
+        width: 17px;
+      }
     }
 
     &::before {
@@ -24,6 +28,10 @@
       transform: rotate(-45deg);
       top: 0;
       left: 0;
+
+      @include mobile {
+        width: 17px;
+      }
     }
   }
 

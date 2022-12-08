@@ -113,7 +113,7 @@
                         <img src="img/img-jacket-desktop@1x.jpg" srcset="img/img-jacket-desktop@2x.jpg 2x" width="130"
                           height="160" alt="Утепленная стеганная куртка женская Top Hills">
                       </picture>
-                      <b class="card__title">Утепленная стеганная куртка женская Top Hills</b>
+                      <a href="#" class="card__title" aria-label="Перейти в товар">Утепленная стеганная куртка женская Top Hills</a>
                       <div class="card__info">
                         <p class="card__description">Артикул <span>512-05</span></p>
                         <p class="card__description">Сезон <span>Осень-зима</span></p>
@@ -161,96 +161,99 @@
                   </div>
                 </li>
                 <li class="cards__item card card--deleted">
-                  <div class="card__content">
-                    <p class="card__deleted">Товар <span>Наименование товара</span> был удален из корзины.</p>
-                    <a href="#" aria-label="Восстановить товар из корзины">Восстановить</a>
+                  <div class="card__wrapper">
+                    <div class="card__content">
+                      <p>Товар <a href="#" aria-label="Перейти в товар">Наименование товара</a> был удален из корзины.</p>
+                      <a href="#" class="card__link-restore" aria-label="Восстановить товар из корзины">Восстановить</a>
+                      <button type="button" class="card__button button button--close"><span
+                          class="visually-hidden">удалить товар из
+                          корзины</span></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item card">
+                  <div class="card__wrapper">
                     <button type="button" class="card__button button button--close"><span
-                        class="visually-hidden">удалить товар из
-                        корзины</span></button>
+                        class="visually-hidden">удалить
+                        товар из корзины</span></button>
+                    <div class="card__image">
+                      <picture>
+                        <source type="image/webp" media="(max-width:767)"
+                          srcset="img/img-hat-mobile@1x.webp 1x, img/img-hat-mobile@2x.webp 2x">
+                        <img src="img/img-hat-desktop@1x.jpg" srcset="img/img-hat-desktop@2x.jpg 2x" width="130"
+                          height="160" alt="Вязанная шапка Zolla">
+                      </picture>
+                      <a href="#" class="card__title" aria-label="Перейти в товар">Вязанная шапка Zolla</a>
+                      <div class="card__info">
+                        <p class="card__description">Артикул <span>891-256</span></p>
+                        <p class="card__description">Сезон <span>Демисезон</span></p>
+                        <ul class="card__measures size">
+                          <li class="size__item">xs</li>
+                          <li class="size__item size__item--active">s</li>
+                          <li class="size__item ">m</li>
+                          <li class="size__item size__item--unavailable">l</li>
+                          <li class="size__item size__item--unavailable">xl</li>
+                        </ul>
+                        <ul class="card__colors color">
+                          <li class="color__item color__item--black color__item--active">
+                            <input class="visually-hidden radio radio--black" type="radio" name="color" id="black"
+                              checked>
+                            <label for="black"></label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card__price price">
+                      <div class="price__content">
+                        <p class="price__now"><span>500</span> &#8381;</p>
+                      </div>
+                      <div class="quantity">
+                        <button class="quantity__button button button--reduce" type="button"><span
+                            class="visually-hidden">уменьшить количество на единицу</span></button>
+                        <span>1</span>
+                        <button class="quantity__button button button--add" type="button"><span
+                            class="visually-hidden">увеличить количество на единицу</span></button>
+                      </div>
+                      <div class="price__content">
+                        <p class="price__now"><span>500</span> &#8381;</p>
+                      </div>
+                    </div>
                   </div>
-            </div>
-            </li>
-            <li class="cards__item card">
-              <div class="card__wrapper">
-                <button type="button" class="card__button button button--close"><span class="visually-hidden">удалить
-                    товар из корзины</span></button>
-                <div class="card__image">
-                  <picture>
-                    <source type="image/webp" media="(max-width:767)"
-                      srcset="img/img-hat-mobile@1x.webp 1x, img/img-hat-mobile@2x.webp 2x">
-                    <img src="img/img-hat-desktop@1x.jpg" srcset="img/img-hat-desktop@2x.jpg 2x" width="130"
-                      height="160" alt="Вязанная шапка Zolla">
-                  </picture>
-                  <b class="card__title">Вязанная шапка Zolla</b>
-                  <div class="card__info">
-                    <p class="card__description">Артикул <span>891-256</span></p>
-                    <p class="card__description">Сезон <span>Демисезон</span></p>
-                    <ul class="card__measures size">
-                      <li class="size__item">xs</li>
-                      <li class="size__item size__item--active">s</li>
-                      <li class="size__item ">m</li>
-                      <li class="size__item size__item--unavailable">l</li>
-                      <li class="size__item size__item--unavailable">xl</li>
-                    </ul>
-                    <ul class="card__colors color">
-                      <li class="color__item color__item--black color__item--active">
-                        <input class="visually-hidden radio radio--black" type="radio" name="color" id="black" checked>
-                        <label for="black"></label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card__price price">
-                  <div class="price__content">
-                    <p class="price__now"><span>500</span> &#8381;</p>
-                  </div>
-                  <div class="quantity">
-                    <button class="quantity__button button button--reduce" type="button"><span
-                        class="visually-hidden">уменьшить количество на единицу</span></button>
-                    <span>1</span>
-                    <button class="quantity__button button button--add" type="button"><span
-                        class="visually-hidden">увеличить количество на единицу</span></button>
-                  </div>
-                  <div class="price__content">
-                    <p class="price__now"><span>500</span> &#8381;</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            </ul>
-          </div>
-          <div class="order__total total">
-            <div class="total__wrapper">
-              <table>
-                <tr>
-                  <td>Товары</td>
-                  <td>24 500 &#8381;</td>
-                </tr>
-                <tr>
-                  <td>Скидка</td>
-                  <td>- 4 500 &#8381;</td>
-                </tr>
-                <tr>
-                  <td>Акции</td>
-                  <td>- 4 000 &#8381;</td>
-                </tr>
-                <tr>
-                  <td>Промокод</td>
-                  <td>- 500 &#8381;</td>
-                </tr>
-                <tr>
-                  <td>Доставка</td>
-                  <td>200 &#8381;</td>
-                </tr>
-              </table>
+                </li>
               </ul>
             </div>
+            <div class="order__total total">
+              <div class="total__wrapper">
+                <table>
+                  <tr>
+                    <td>Товары</td>
+                    <td>24 500 &#8381;</td>
+                  </tr>
+                  <tr>
+                    <td>Скидка</td>
+                    <td>- 4 500 &#8381;</td>
+                  </tr>
+                  <tr>
+                    <td>Акции</td>
+                    <td>- 4 000 &#8381;</td>
+                  </tr>
+                  <tr>
+                    <td>Промокод</td>
+                    <td>- 500 &#8381;</td>
+                  </tr>
+                  <tr>
+                    <td>Доставка</td>
+                    <td>200 &#8381;</td>
+                  </tr>
+                </table>
+                </ul>
+              </div>
+
+            </div>
 
           </div>
-
         </div>
-    </div>
-    </section>
+      </section>
 
     </div>
   </main>

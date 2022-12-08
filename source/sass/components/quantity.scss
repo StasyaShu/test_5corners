@@ -6,6 +6,10 @@
   background-color: $color-white-smoke;
   border-radius: 5px;
 
+  @include mobile {
+    margin: 0 8px;
+  }
+
   &__button {
     position: relative;
   }
@@ -16,5 +20,9 @@
     line-height: 21px;
     color: $color-black;
     margin: 0 30px;
+
+    @include mobile {
+      margin: 0 27px;
+    }
   }
 }

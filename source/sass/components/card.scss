@@ -10,6 +10,7 @@
     align-items: flex-start;
 
     @include mobile {
+      padding: 16px 0;
       display: flex;
       flex-direction: column;
     }
@@ -17,8 +18,8 @@
 
   &__button {
     position: absolute;
-    top: 33px;
-    right: 8px;
+    top: 23px;
+    right: 4px;
   }
 
   &__image {
@@ -50,16 +51,22 @@
   }
 
   &__title {
+    display: block;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     color: $color-black;
-    max-width: 197px;
+    max-width: 91%;
     margin: 0 0 15px;
 
     @include mobile {
       font-size: 14px;
       line-height: 18px;
+      max-width: 91%;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -99,35 +106,87 @@
       margin: 0 0 12px;
     }
   }
+
+  &__price {
+    @include mobile {
+      align-self: center;
+    }
+  }
 }
 
-.card--deleted {
+.card--deleted .card__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
 
-  &__button {
-    position: static;
+  @include mobile {
+    padding: 16px 0;
   }
 
-  &__content {
+  .card__content {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    background-color: $color-white-smoke;
+    padding: 15px 52px 15px 25px;
 
-    a {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 18px;
-      color: $color-black;
+    @include mobile {
+      padding: 12px 15px 12px 8px;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 
-  &__deleted {
+  .card__button {
+    top: 50%;
+    right: 40px;
+
+    @include mobile {
+      top: 36px;
+      right: 18px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     color: $color-dim-gray;
 
-    span {
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+      max-width: 91%;
+      margin: 0 0 4px;
+    }
+
+    a {
       font-weight: 600;
+      color: $color-dim-gray;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .card__link-restore {
+    display: block;
+    margin: 0 0 0 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-black;
+
+    @include mobile {
+      margin: 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
