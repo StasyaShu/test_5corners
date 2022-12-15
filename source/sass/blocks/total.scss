@@ -1,7 +1,136 @@
 .total {
-  border: 1px solid $color-dim-gray;
-
   &__wrapper {
     padding: 30px 20px;
+    border: 1px solid $color-dim-gray;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0 0 20px;
+    margin: 0;
+    border-bottom: 1px solid $color-very-light-grey;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-black;
+    margin: 0 0 5px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__item--discount {
+    span {
+      color: $color-persian-red;
+    }
+  }
+
+  &__item--additional {
+    font-size: 16px;
+    line-height: 21px;
+
+    span {
+      color: $color-persian-red;
+      font-weight: 400;
+    }
+  }
+
+  &__item:nth-child(1),
+  &__item:nth-last-child(-n + 2) {
+    margin: 0 0 20px;
+  }
+
+  &__item:last-child {
+    margin: 0;
+  }
+
+  &__from-warehouse {
+    padding: 20px 0;
+    border-bottom: 1px solid $color-very-light-grey;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color-black;
+
+      span {
+        display: block;
+        font-size: 12px;
+        line-height: 15px;
+        color: $color-dim-gray;
+      }
+    }
+
+    button {
+      margin: 8px 0 0;
+      width: 41px;
+      height: 14px;
+    }
+  }
+
+  &__sum {
+    padding: 20px 0 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0 0 20px;
+      padding: 0;
+      font-size: 28px;
+      line-height: 30px;
+      color: $color-black;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+
+      span:first-of-type {
+        margin: 0 0 0 auto;
+      }
+
+      span:last-of-type {
+        font-weight: 500;
+      }
+    }
+
+    input {
+      width: 100%;
+      outline: 0;
+      padding: 15px 20px;
+      border: 1px solid $color-very-light-grey;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 21px;
+        color: $color-dim-gray;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+
+  &__policy {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-dim-gray;
+    text-align: center;
   }
 }

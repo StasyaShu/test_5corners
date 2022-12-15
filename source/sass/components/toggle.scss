@@ -1,0 +1,29 @@
+.toggle {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  background-color: $color-very-light-grey-05;
+  border-radius: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+    width: 22px;
+    height: 22px;
+    background-color: $color-dim-gray;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: transform $trans-03;
+  }
+}
+
+.toggle--active {
+  &::before {
+    background-color: $color-black;
+    transform: translateX(100%);
+    transition: transform $trans-03;
+  }
+}

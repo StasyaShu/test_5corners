@@ -2,13 +2,26 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+  transition: color $trans-03, background-color $trans-03;
+  color: $color-white;
+
+  &:hover {
+    color: $color-dim-gray;
+    transition: color $trans-03, background-color $trans-03;
+
+    &::before,
+    &::after {
+      background-color: $color-dim-gray;
+      transition: color $trans-03, background-color $trans-03;
+    }
+  }
 
   &--close {
     &::after {
       content: "";
       position: absolute;
       width: 20px;
-      height: 1.5px;
+      height: 2px;
       background-color: $color-black;
       transform: rotate(45deg);
       top: 0;
@@ -23,7 +36,7 @@
       content: "";
       position: absolute;
       width: 20px;
-      height: 1.5px;
+      height: 2px;
       background-color: $color-black;
       transform: rotate(-45deg);
       top: 0;
@@ -40,10 +53,11 @@
       content: "";
       position: absolute;
       width: 12px;
-      height: 1.5px;
+      height: 2px;
       background-color: $color-black;
       top: 0;
       left: 0;
+      transition: background-color $trans-03;
     }
   }
 
@@ -52,21 +66,43 @@
       content: "";
       position: absolute;
       width: 12px;
-      height: 1.5px;
+      height: 2px;
       background-color: $color-black;
       top: 0;
       left: 0;
+      transition: background-color $trans-03;
     }
 
     &::before {
       content: "";
       position: absolute;
       width: 12px;
-      height: 1.5px;
+      height: 2px;
       background-color: $color-black;
       transform: rotate(90deg);
       top: 0;
       left: 0;
+      transition: background-color $trans-03;
     }
+  }
+
+  &--submit {
+    background-color: $color-black;
+    padding: 15px 0;
+    text-align: center;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-dim-gray;
+    }
+  }
+}
+
+.button.is-disabled {
+  background-color: $color-very-light-grey;
+
+  &::before,
+  &::after {
+    background-color: $color-very-light-grey;
   }
 }
