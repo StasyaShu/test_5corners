@@ -123,6 +123,7 @@
   }
 
   &__sum {
+    position: relative;
     padding: 20px 0 0;
     margin: 0 0 20px;
     display: flex;
@@ -165,16 +166,18 @@
 
     input {
       width: 100%;
-      outline: 0;
-      padding: 15px 20px;
-      border: 1px solid $color-very-light-grey;
-
-      &::placeholder {
-        font-size: 16px;
-        line-height: 21px;
-        color: $color-dim-gray;
-      }
     }
+
+    button {
+      display: none;
+      position: absolute;
+      right: 15px;
+      top: 84px;
+    }
+  }
+
+  &__sum input:focus + button {
+    display: block;
   }
 
   &__button {

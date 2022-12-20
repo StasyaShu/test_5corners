@@ -1,7 +1,7 @@
 .quantity {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 13px;
   margin: 0;
   background-color: $color-white-smoke;
   border-radius: 5px;
@@ -12,6 +12,7 @@
 
   &__button {
     position: relative;
+    padding: 10px;
   }
 
   span {

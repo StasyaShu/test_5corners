@@ -1,1 +1,5 @@
-import './vendor/jquery-3.6.1.min';
+import {putMask} from "./modules/init-masks";
+
+window.addEventListener('DOMContentLoaded', () => {
+  putMask();
+})

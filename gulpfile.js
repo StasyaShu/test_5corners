@@ -13,7 +13,7 @@ const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const del = require('del');
 const browserSync = require('browser-sync');
-const webpack = require('webpack-stream')
+const webpack = require('webpack-stream');
 
 // Styles
 
@@ -131,6 +131,7 @@ const copy = (done) => {
       'source/*.{ico,svg}',
       'source/img/**/*.{jpg,png,svg}',
       'source/leaflet/**',
+      'source/jquery/**',
     ], {
       base: 'source',
     })
