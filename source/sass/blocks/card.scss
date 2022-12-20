@@ -9,10 +9,13 @@
     position: relative;
     align-items: flex-start;
 
-    @include mobile {
-      padding: 16px 0;
+    @media (max-width: 1385px) {
       display: flex;
       flex-direction: column;
+    }
+
+    @include mobile {
+      padding: 16px 0;
     }
   }
 
@@ -28,9 +31,14 @@
     grid-template-rows: auto auto;
     grid-column-gap: 10px;
 
+    @media (max-width: 1385px) {
+      margin: 0 0 15px;
+    }
+
     @include mobile {
       grid-template-columns: 90px 1fr;
       grid-row-gap: 10px;
+      margin: 0;
     }
 
     picture {
@@ -108,7 +116,12 @@
   }
 
   &__price {
+    @media (max-width: 1385px) {
+      width: 80%;
+    }
+
     @include mobile {
+      width: 100%;
       align-self: center;
     }
   }
@@ -131,8 +144,11 @@
     background-color: $color-white-smoke;
     padding: 15px 52px 15px 25px;
 
-    @include mobile {
+    @include tablet {
       padding: 12px 15px 12px 8px;
+    }
+
+    @include mobile {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -156,10 +172,18 @@
     line-height: 21px;
     color: $color-dim-gray;
 
+    @media (max-width: 1385px) {
+      width: 100%;
+      margin: 0 0 7px;
+    }
+
+    @include tablet {
+      max-width: 91%;
+    }
+
     @include mobile {
       font-size: 14px;
       line-height: 18px;
-      max-width: 91%;
       margin: 0 0 4px;
     }
 
@@ -180,6 +204,10 @@
     font-size: 14px;
     line-height: 18px;
     color: $color-black;
+
+    @media (max-width: 1385px) {
+      margin: 0;
+    }
 
     @include mobile {
       margin: 0;

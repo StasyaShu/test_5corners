@@ -1,0 +1,19 @@
+.payment {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    padding: 0 0 0 32px;
+    margin: 0 0 20px;
+
+    label {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}

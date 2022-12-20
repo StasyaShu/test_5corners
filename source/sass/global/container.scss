@@ -4,8 +4,12 @@
   margin: 0 auto;
   padding: 0 200px;
 
+  @media (max-width: 1285px) {
+    padding: 0 80px;
+  }
+
   @include tablet {
-    padding: 0 40px;
+    padding: 0 30px;
   }
 
   @include mobile {

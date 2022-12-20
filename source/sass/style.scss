@@ -26,6 +26,10 @@
 @import "blocks/card";
 @import "blocks/price";
 @import "blocks/total";
+@import "blocks/contacts";
+@import "blocks/form";
+@import "blocks/payment";
+@import "blocks/map-canvas";
 
 // Components
 
@@ -37,3 +41,4 @@
 @import "components/button";
 @import "components/quantity";
 @import "components/toggle";
+@import "components/title";

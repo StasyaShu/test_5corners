@@ -39,3 +39,52 @@
     background-color: $color-golden-brown;
   }
 }
+
+.radio--payment {
+  & + label::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -32px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: block;
+    padding: 0;
+    border: 1px solid $color-dim-gray;
+  }
+
+  &:checked + label::before {
+    border: 1px solid $color-dim-gray;
+    box-shadow: none;
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -27px;
+    margin-top: -5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-black;
+  }
+
+  &:hover + label::before {
+    border: 1px solid $color-dim-gray;
+    box-shadow: none;
+  }
+
+  &:hover + label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -27px;
+    margin-top: -5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-black;
+  }
+}

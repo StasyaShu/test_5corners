@@ -130,6 +130,7 @@ const copy = (done) => {
       'source/fonts/*.{woff2,woff}',
       'source/*.{ico,svg}',
       'source/img/**/*.{jpg,png,svg}',
+      'source/leaflet/**',
     ], {
       base: 'source',
     })
