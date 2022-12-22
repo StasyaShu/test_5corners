@@ -278,7 +278,8 @@
                   <div class="error"></div>
                 </li>
                 <li class="contacts__item">
-                  <input class="input" type="text" id="email" name="email" placeholder="Email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" required>
+                  <input class="input" type="text" id="email" name="email" placeholder="Email"
+                    pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" required>
                   <label for="email">Email</label>
                   <div class="error"></div>
                 </li>
@@ -329,6 +330,12 @@
   <footer class="footer">
 
   </footer>
+  <template id="success-message">
+    <div class="success-message">
+      <p>Ваш заказ успешно оформлен!</p>
+    </div>
+  </template>
+  <div class="overlay"></div>
   <script src="jquery/jquery-3.6.1.min.js"></script>
   <script src="jquery/jquery.maskedinput.min.js"></script>
   <script src="leaflet/leaflet.js"></script>

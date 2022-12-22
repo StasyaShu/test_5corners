@@ -13,6 +13,7 @@
 // Global
 
 @import "global/container";
+@import "global/overlay";
 
 // Blocks
 
@@ -31,6 +32,7 @@
 @import "blocks/payment";
 @import "blocks/map-canvas";
 @import "blocks/comments";
+@import "blocks/success-message";
 
 // Components
 

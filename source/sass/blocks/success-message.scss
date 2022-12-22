@@ -1,0 +1,37 @@
+.success-message {
+  position: absolute;
+  width: 700px;
+  padding: 200px 0;
+  margin: -237px -335px;
+  top: 50%;
+  left: 50%;
+  z-index: 22;
+  background-color: $color-black;
+  border-radius: 26px;
+  box-shadow: 2px 2px 15px $color-very-light-grey-05;
+
+  @include mobile {
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 120px 0;
+    margin: 113px 25px;
+  }
+
+  p {
+    text-align: center;
+    display: block;
+    width: 70%;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 600;
+    color: $color-white-smoke;
+
+    @include mobile {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+}
