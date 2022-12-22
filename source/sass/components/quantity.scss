@@ -15,15 +15,19 @@
     padding: 10px;
   }
 
-  span {
+  input {
+    pointer-events: none;
+    width: 68px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     color: $color-black;
-    margin: 0 30px;
 
     @include mobile {
-      margin: 0 27px;
+      width: 62px;
     }
   }
 }
