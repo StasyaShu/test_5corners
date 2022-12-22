@@ -1,4 +1,5 @@
-.input {position: relative;
+.input {
+  position: relative;
   padding: 15px 20px;
   border: 1px solid $color-very-light-grey;
   color: $color-black;
@@ -20,5 +21,9 @@
 
   &--invalid {
     border: 1px solid $color-persian-red;
+  }
+
+  &--promo {
+    padding: 15px 120px 15px 20px;
   }
 }

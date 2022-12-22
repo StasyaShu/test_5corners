@@ -7,7 +7,8 @@ const validateInput = () => {
   const inputEmail = form.querySelector('#email');
   const inputPhone = form.querySelector('#phone');
   const inputAddress = form.querySelector('#address');
-  // const buttonPromoApply = form.querySelector('#promo-apply');
+  const inputPromo = form.querySelector('#promo');
+  const btnPromoApply = form.querySelector('#promo-apply');
 
   requiredEls.forEach((input) => {
     input.onblur = function () {
@@ -38,13 +39,35 @@ const validateInput = () => {
     }
   })
 
-  // if (buttonPromoApply) {
-  //   buttonPromoApply.addEventListener('click', () => {
-  //     const inputPromo = buttonPromoApply.parentNode.querySelector('#promo');
-  //     const error = buttonPromoApply.parentNode.querySelector('.error');
-  //     /[a-z]/i.test(inputPromo.value) ? error.innerHTML = `${inputPromo.value} - купон применен.` : error.innerHTML = `${inputPromo.value} - купон не найден`
-  //   })
-  // }
+  inputPromo.addEventListener('input', () => {
+    if (inputPromo.value == '') {
+      btnPromoApply.style.display = 'none';
+      inputPromo.classList.remove('input--promo');
+    } else {
+      btnPromoApply.style.display = 'block';
+      inputPromo.classList.add('input--promo');
+    }
+    inputPromo.classList.remove('input--invalid');
+    const error = inputPromo.parentNode.querySelector('.error');
+    error.innerHTML = '';
+    error.classList.remove('error--ok');
+  })
+
+  if (btnPromoApply) {
+    btnPromoApply.addEventListener('click', () => {
+      const promoRegExp = new RegExp('[0-9]{1}[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{2}');
+      const promoValue = inputPromo.value;
+      const error = inputPromo.parentNode.querySelector('.error');
+
+      if (promoRegExp.test(promoValue)) {
+        error.innerHTML = `${promoValue} - купон применен.`;
+        error.classList.add('error--ok');
+      } else {
+        error.innerHTML = `${promoValue} - купон не найден`;
+        inputPromo.classList.add('input--invalid');
+      }
+    })
+  }
 }
 
-export { validateInput };
+export {validateInput};
