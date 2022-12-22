@@ -66,12 +66,16 @@
             <span>4</span>
           </li>
         </ul>
+        <a href="#" class="header__link-mobile" aria-label="Переход в корзину">
+          <svg width="20" height="18" viewBox="0 0 20 18">
+            <use xlink:href="img/sprite.svg#icon-bag"></use>
+          </svg>
+        </a>
         <button class="header__button burger-button" type="button"><span class="visually-hidden">Открыть мобильное
             меню</span>
           <svg width="32" height="11" viewBox="0 0 32 11">
             <use xlink:href="img/sprite.svg#icon-burger-menu"></use>
           </svg>
-
         </button>
       </div>
     </div>
@@ -95,7 +99,7 @@
       <section class="order">
         <div class="order__wrapper">
           <form class="order__form form" action="https://echo.htmlacademy.ru" method="post"
-            enctype="multipart/form-data" autocomplete="off">
+            enctype="multipart/form-data" autocomplete="off" id="order-form">
             <div class="form__header">
               <h2 class="form__title">Оформление заказа</h2>
               <p class="form__have-account">Есть аккаунт?</p>
@@ -128,16 +132,17 @@
                         </ul>
                         <ul class="card__colors color">
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--black" type="radio" name="color" id="black"
-                              checked>
+                            <input class="visually-hidden radio radio--black" type="radio" name="jacket-color"
+                              id="black" checked>
                             <label for="black"></label>
                           </li>
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--blue" type="radio" name="color" id="blue">
+                            <input class="visually-hidden radio radio--blue" type="radio" name="jacket-color" id="blue">
                             <label for="blue"></label>
                           </li>
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--brown" type="radio" name="color" id="brown">
+                            <input class="visually-hidden radio radio--brown" type="radio" name="jacket-color"
+                              id="brown">
                             <label for="brown"></label>
                           </li>
                         </ul>
@@ -199,7 +204,7 @@
                         </ul>
                         <ul class="card__colors color">
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--black" type="radio" name="color-2" id="black"
+                            <input class="visually-hidden radio radio--black" type="radio" name="hat-color" id="black"
                               checked>
                             <label for="black"></label>
                           </li>
@@ -243,8 +248,9 @@
                 </div>
                 <div class="total__sum">
                   <p>Итого: <span>20&nbsp;700</span><span>&nbsp;&#8381;</span></p>
-                  <input class="input" class="input" type="text" placeholder="Введите промокод">
-                  <button class="button button--promo" type="button">Применить</button>
+                  <input class="input" class="input" type="text" name="promo" id="promo" placeholder="Введите промокод">
+                  <button class="button button--promo" type="button" id="promo-apply">Применить</button>
+                  <div class="error"></div>
                 </div>
                 <button class="total__button button button--submit" type="submit">Оформить заказ</button>
                 <span class="total__policy">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с <a href="#"
@@ -255,29 +261,34 @@
               <h2 class="contacts__title title">Контактные данные</h2>
               <ul class="contacts__list">
                 <li class="contacts__item">
-                  <input class="input" type="text" id="name" data-name placeholder="Имя"
+                  <input class="input" type="text" id="name" name="name" data-name placeholder="Имя"
                     pattern="^[А-Яа-яЁёA-za-z\s\D]+$" required>
                   <label for="name">Имя</label>
+                  <div class="error"></div>
                 </li>
                 <li class="contacts__item">
-                  <input class="input" type="text" id="surname" data-name placeholder="Фамилия"
+                  <input class="input" type="text" id="surname" name="surname" data-name placeholder="Фамилия"
                     pattern="^[А-Яа-яЁёA-za-z\s\D]+$" required>
                   <label for="name">Фамилия</label>
+                  <div class="error"></div>
                 </li>
                 <li class="contacts__item">
-                  <input class="input" type="text" id="phone" placeholder="Телефон" required>
+                  <input class="input" type="text" id="phone" name="phone" placeholder="Телефон" required>
                   <label for="phone">Телефон</label>
+                  <div class="error"></div>
                 </li>
                 <li class="contacts__item">
-                  <input class="input" type="text" id="email" placeholder="Email" required>
+                  <input class="input" type="text" id="email" name="email" placeholder="Email" required>
                   <label for="email">Email</label>
+                  <div class="error"></div>
                 </li>
                 <li class="contacts__item contacts__item--address">
-                  <input class="input" type="text" id="address" placeholder="Адрес доставки" required>
+                  <input class="input" type="text" id="address" name="address" placeholder="Адрес доставки" required>
                   <label for="address">Адрес доставки</label>
                   <svg width="18" height="18" viewBox="0 0 18 18">
                     <use xlink:href="img/sprite.svg#icon-search"></use>
                   </svg>
+                  <div class="error"></div>
                 </li>
               </ul>
             </div>

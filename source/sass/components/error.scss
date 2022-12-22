@@ -1,0 +1,10 @@
+.error {
+  padding: 4px 16px 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-persian-red;
+
+  &--ok {
+    color: $color-green;
+  }
+}

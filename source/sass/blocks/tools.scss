@@ -4,10 +4,18 @@
   flex-wrap: wrap;
   align-items: center;
   max-width: 170px;
+
+  @include mobile {
+    max-width: 100%;
+  }
 }
 
 .tools__item:not(:last-child) {
   margin: 0 30px 3px 0;
+
+  @include mobile {
+    margin: 0 50px 6px 0;
+  }
 }
 
 .tools__item {
@@ -29,22 +37,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  @include mobile {
-    display: none;
-  }
-}
-
-.tools__item--bag {
-  span {
-    @include mobile {
-      display: none;
-    }
-  }
-
-  @include mobile {
-    display: block;
   }
 }
 

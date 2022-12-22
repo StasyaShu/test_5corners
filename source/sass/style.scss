@@ -30,6 +30,7 @@
 @import "blocks/form";
 @import "blocks/payment";
 @import "blocks/map-canvas";
+@import "blocks/comments";
 
 // Components
 
@@ -43,3 +44,5 @@
 @import "components/toggle";
 @import "components/title";
 @import "components/input";
+@import "components/error";
+@import "components/is-open";
