@@ -21,7 +21,7 @@ const validateInput = () => {
         } else if (input === inputSurname) {
           error.innerHTML = 'Пожалуйста, введите Вашу фамилию.';
         } else if (input === inputEmail) {
-          error.innerHTML = 'Пожалуйста, введите адрес Вашей электронной почты.';
+          error.innerHTML = 'Пожалуйста, введите адрес Вашей электронной почты по форме: login@post.__';
         } else if (input === inputPhone) {
           error.innerHTML = 'Пожалуйста, введите Ваш номер телефона.';
         } else if (input === inputAddress) {
