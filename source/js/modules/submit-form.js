@@ -1,33 +1,33 @@
-import { onSubmitSuccess } from "./alerts";
-import { form } from "./data";
+import {onSubmitSuccess} from './alerts';
+import {form} from './data';
 
-const manageForm = (collection) => {
-  collection.addEventListener('click', (evt) => {
-    const targ = evt.target;
-    // console.log(targ.content);
-    const inputs = collection.querySelectorAll('.radio-js')
+const manageForm = () => {
 
-    function clearAll () {
-      inputs.forEach((item) => {
-        item.removeAttribute('checked', '');
+  function getFormElements(formNode) {
+    const { elements } = formNode
+    const data = new FormData()
+
+    Array.from(elements)
+      .filter((item) => !!item.name)
+      .forEach((element) => {
+        const { name, type } = element
+        const value = type === 'radio' ? element.checked + ` ${element.value}` : element.value;
+
+        data.append(name, value)
       })
-    }
 
-    if (targ.tagName == 'input') {
-      if (!targ.hasAttribute('checked', '')) {
-        clearAll()
-        targ.setAttribute('checked', '');
-      }
-    }
-  })
+    console.log(Array.from(data.entries()));
+ }
+
+  function handleFormSubmit(evt) {
+    evt.preventDefault();
+    getFormElements(form);
+    onSubmitSuccess();
+ }
 
   if (form) {
-    form.addEventListener('submit', () => {
-      onSubmitSuccess();
-    })
-  }
+    form.addEventListener('submit', handleFormSubmit);
+ }
 }
 
-export { manageForm };
-
-
+export {manageForm};

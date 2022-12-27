@@ -1,4 +1,4 @@
-import {body, ESC_KEY_CODE, form} from "./data";
+import {body, ESC_KEY_CODE, form} from './data';
 
 const successTemplate = document.querySelector('#success-message').content.querySelector('.success-message');
 const submitSuccessMessage = successTemplate.cloneNode(true);
@@ -11,7 +11,7 @@ const documentClickHandler = () => {
 const documentKeydownHandler = (evt) => {
   if (evt.keyCode === ESC_KEY_CODE) {
     closeSubmitSuccess();
-  }
+}
 }
 
 function onSubmitSuccess () {

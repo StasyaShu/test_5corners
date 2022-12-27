@@ -1,10 +1,10 @@
-import {putMask} from "./modules/init-masks";
-import {validateInput} from "./modules/validate";
-import {manageMobMenu} from "./modules/init-mobile-menu";
-import {toggler} from "./modules/init-storage-toggle";
-import {operateQuantity} from "./modules/operate-quantity";
-import {manageForm} from "./modules/submit-form";
-import {countChar} from "./modules/comment-char-counter";
+import {putMask} from './modules/init-masks';
+import {validateInput} from './modules/validate';
+import {manageMobMenu} from './modules/init-mobile-menu';
+import {toggler} from './modules/init-storage-toggle';
+import {operateQuantity} from './modules/operate-quantity';
+import {manageForm} from './modules/submit-form';
+import {countChar} from './modules/comment-char-counter';
 
 window.addEventListener('DOMContentLoaded', () => {
   putMask();
@@ -14,9 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const quantities = document.querySelectorAll('.quantity');
   quantities.forEach(operateQuantity);
-
-  const radioColl = document.querySelector('[data-radio]')
-  manageForm(radioColl);
+  manageForm();
 
   countChar();
 })

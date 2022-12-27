@@ -8,15 +8,15 @@ const operateQuantity = (count) => {
     if (value > 1) {
       value--;
       valueField.value = value;
-    } else {
+  } else {
       return 1;
-    }
-  })
+  }
+})
 
   btnAdd.addEventListener('click', () => {
     value++;
     valueField.value = value;
-  })
+})
 }
 
 export {operateQuantity};
