@@ -8,6 +8,13 @@
     grid-template-rows: auto auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 16px;
+      grid-column-gap: 0;
+    }
   }
 
   &__item {
@@ -16,19 +23,6 @@
     input {
       width: 100%;
     }
-
-    // label {
-    //   display: none;
-    //   position: absolute;
-    //   top: -10px;
-    //   left: 17px;
-    //   padding: 2px 4px;
-    //   font-weight: 400;
-    //   font-size: 12px;
-    //   line-height: 15px;
-    //   color: $color-dim-gray;
-    //   background-color: $color-white;
-    // }
   }
 
   &__item input + label {

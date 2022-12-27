@@ -110,6 +110,10 @@
 
   &__personal-data {
     margin: 0 0 40px;
+
+    @include mobile {
+      margin: 0 0 16px;
+    }
   }
 
   &__payment {
@@ -123,11 +127,16 @@
   &__map {
     grid-column: 2 / -1;
     grid-row: 4 / 6;
+
+    @include mobile {
+      margin: 0 0 40px;
+    }
   }
 
   &__comments {
     @include mobile {
       order: 7;
+      margin: 0 0 40px;
     }
   }
 }

@@ -1,90 +1,158 @@
-.radio {
-  & + label::before {
+// .radio {
+//   & + label::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 50%;
+//     display: block;
+//     padding: 2px;
+//   }
+
+//   &:hover + label::before {
+//     border: 2px solid $color-white;
+//     box-shadow: 0px 0px 0px 1px $color-very-light-grey;
+//   }
+
+//   &:checked + label::before {
+//     border: 2px solid $color-white;
+//     box-shadow: 0px 0px 0px 1px $color-black;
+//   }
+// }
+
+.radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid $color-white;
+}
+
+.radio::before input:checked {
+  box-shadow: 0px 0px 0px 1px $color-black;
+}
+
+.radio:hover::before {
+  box-shadow: 0px 0px 0px 1px $color-very-light-grey;
+}
+
+.radio--black {
+  &::before {
+    background-color: $color-charcoal;
+  }
+}
+
+.radio--blue {
+  &::before {
+    background-color: $color-cerulean;
+  }
+}
+
+.radio--brown {
+  &::before {
+    background-color: $color-golden-brown;
+  }
+}
+// .radio--black {
+//   & + label::before {
+//     background-color: $color-charcoal;
+//   }
+// }
+
+// .radio--blue {
+//   & + label::before {
+//     background-color: $color-cerulean;
+//   }
+// }
+
+// .radio--brown {
+//   & + label::before {
+//     background-color: $color-golden-brown;
+//   }
+// }
+
+
+.radio--payment {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    padding: 0;
+    border: 1px solid $color-dim-gray;
+  }
+}
+
+.radio--payment::after input:checked {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    display: block;
-    padding: 2px;
-  }
-
-  &:hover + label::before {
-    border: 2px solid $color-white;
-    box-shadow: 0px 0px 0px 1px $color-very-light-grey;
-  }
-
-  &:checked + label::before {
-    border: 2px solid $color-white;
-    box-shadow: 0px 0px 0px 1px $color-black;
-  }
-}
-
-.radio--black {
-  & + label::before {
-    background-color: $color-charcoal;
-  }
-}
-
-.radio--blue {
-  & + label::before {
-    background-color: $color-cerulean;
-  }
-}
-
-.radio--brown {
-  & + label::before {
-    background-color: $color-golden-brown;
-  }
-}
-
-.radio--payment {
-  & + label::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: -32px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    display: block;
-    padding: 0;
-    border: 1px solid $color-dim-gray;
-  }
-
-  &:checked + label::before {
-    border: 1px solid $color-dim-gray;
-    box-shadow: none;
-  }
-
-  &:checked + label::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -27px;
-    margin-top: -5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
     background-color: $color-black;
-  }
-
-  &:hover + label::before {
-    border: 1px solid $color-dim-gray;
     box-shadow: none;
-  }
-
-  &:hover + label::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -27px;
-    margin-top: -5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: $color-black;
-  }
 }
+
+// .radio--payment {
+//   & + label::before {
+//     content: "";
+//     position: absolute;
+//     top: 2px;
+//     left: -32px;
+//     width: 22px;
+//     height: 22px;
+//     border-radius: 50%;
+//     display: block;
+//     padding: 0;
+//     border: 1px solid $color-dim-gray;
+//   }
+
+//   &:checked + label::before {
+//     border: 1px solid $color-dim-gray;
+//     box-shadow: none;
+//   }
+
+//   &:checked + label::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: -27px;
+//     margin-top: -4px;
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background-color: $color-black;
+//   }
+
+//   &:hover + label::before {
+//     border: 1px solid $color-dim-gray;
+//     box-shadow: none;
+//   }
+
+//   &:hover + label::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: -27px;
+//     margin-top: -4px;
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background-color: $color-black;
+//   }
+// }

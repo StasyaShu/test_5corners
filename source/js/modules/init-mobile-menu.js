@@ -1,7 +1,8 @@
+import {body} from './data';
+
 const manageMobMenu = () => {
   const burgerButton = document.querySelector('.header__button');
   const menu = document.querySelector('.header');
-  const body = document.querySelector('body');
 
   if (burgerButton) {
     burgerButton.addEventListener('click', () => {

@@ -1,9 +1,18 @@
 .comments {
   textarea {
     width: 100%;
+    margin: 0 0 4px;
+  }
+
+  textarea::placeholder {
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-dim-gray;
   }
 
   p {
+    margin: 0;
+    padding: 0;
     font-size: 12px;
     line-height: 15px;
     color: $color-dim-gray;

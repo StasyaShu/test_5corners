@@ -130,20 +130,23 @@
                           <li class="size__item">l</li>
                           <li class="size__item">xl</li>
                         </ul>
-                        <ul class="card__colors color">
+                        <ul class="card__colors color" data-radio>
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--black" type="radio" name="jacket-color"
-                              id="black" checked>
-                            <label for="black"></label>
+                            <label class="radio radio--black">
+                              <input class="radio-js" type="radio" name="jacket-color" value="black" checked>
+                            </label>
                           </li>
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--blue" type="radio" name="jacket-color" id="blue">
-                            <label for="blue"></label>
+                            <label class="radio radio--blue">
+                              <input class="visually-hidden radio radio--blue" type="radio" name="jacket-color"
+                                value="blue">
+                            </label>
                           </li>
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--brown" type="radio" name="jacket-color"
-                              id="brown">
-                            <label for="brown"></label>
+                            <label class="radio radio--brown">
+                              <input class="visually-hidden radio radio--brown" type="radio" name="jacket-color"
+                              value="brown">
+                            </label>
                           </li>
                         </ul>
                       </div>
@@ -204,8 +207,7 @@
                         </ul>
                         <ul class="card__colors color">
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--black" type="radio" name="hat-color" id="black"
-                              checked>
+                            <input class="visually-hidden radio radio--black" type="radio" name="hat-color" id="black">
                             <label for="black"></label>
                           </li>
                         </ul>
@@ -295,17 +297,20 @@
             </div>
             <div class="form__payment payment">
               <h2 class="payment__title title">Оплата</h2>
-              <ul class="payment__list">
+              <ul class="payment__list" data-radio>
                 <li class="payment__item">
-                  <input class="visually-hidden radio radio--payment" type="radio" name="payment" id="cash" checked>
-                  <label for="cash">Наличными курьеру</label>
+                  <label class="radio radio--payment">
+                    <input class="radio radio--payment" type="radio" name="payment" value="cash" checked>
+                    Наличными курьеру
+                  </label>
+                  <!-- <label for="cash">Наличными курьеру</label> -->
                 </li>
                 <li class="payment__item">
-                  <input class="visually-hidden radio radio--payment" type="radio" name="payment" id="card-courier">
+                  <input class="visually-hidden radio radio--payment" type="radio" name="payment" id="card-courier" value="card-courier">
                   <label for="card-courier">Картой курьеру</label>
                 </li>
                 <li class="payment__item">
-                  <input class="visually-hidden radio radio--payment" type="radio" name="payment" id="card-online">
+                  <input class="visually-hidden radio radio--payment" type="radio" name="payment" id="card-online" value="card-online">
                   <label for="card-online">Картой онлайн</label>
                 </li>
               </ul>

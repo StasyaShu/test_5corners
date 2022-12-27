@@ -1,7 +1,7 @@
-const validateInput = () => {
-  const form = document.querySelector('#order-form');
-  const requiredEls = form.querySelectorAll('[required]');
+import {form} from "./data";
 
+const validateInput = () => {
+  const requiredEls = form.querySelectorAll('[required]');
   const inputName = form.querySelector('#name');
   const inputSurname = form.querySelector('#surname');
   const inputEmail = form.querySelector('#email');
