@@ -11,19 +11,12 @@
   }
 
   &__item {
-    width: 20px;
-    height: 20px;
+    position: relative;
+    display: block;
     margin: 0 7px 0 0;
 
     @include mobile {
       margin: 0 16px 0 0;
-    }
-
-    label {
-      display: block;
-      position: relative;
-      cursor: pointer;
-      user-select: none;
     }
   }
 }

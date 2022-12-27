@@ -4,6 +4,7 @@ import {manageMobMenu} from "./modules/init-mobile-menu";
 import {toggler} from "./modules/init-storage-toggle";
 import {operateQuantity} from "./modules/operate-quantity";
 import {manageForm} from "./modules/submit-form";
+import {countChar} from "./modules/comment-char-counter";
 
 window.addEventListener('DOMContentLoaded', () => {
   putMask();
@@ -16,4 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const radioColl = document.querySelector('[data-radio]')
   manageForm(radioColl);
+
+  countChar();
 })

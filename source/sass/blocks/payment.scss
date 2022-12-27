@@ -6,18 +6,14 @@
   }
 
   &__item {
-    padding: 0 0 0 32px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
     margin: 0 0 20px;
-
-    label {
-      display: block;
-      position: relative;
-      cursor: pointer;
-      user-select: none;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 21px;
-      color: $color-black;
-    }
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-black;
   }
 }

@@ -132,21 +132,16 @@
                         </ul>
                         <ul class="card__colors color" data-radio>
                           <li class="color__item">
-                            <label class="radio radio--black">
-                              <input class="radio-js" type="radio" name="jacket-color" value="black" checked>
-                            </label>
+                            <input class="radio radio--black" type="radio" name="jacket-color" value="black">
+                            <span class="radio__title"></span>
                           </li>
                           <li class="color__item">
-                            <label class="radio radio--blue">
-                              <input class="visually-hidden radio radio--blue" type="radio" name="jacket-color"
-                                value="blue">
-                            </label>
+                            <input class="radio radio--blue" type="radio" name="jacket-color" value="blue">
+                            <span class="radio__title"></span>
                           </li>
                           <li class="color__item">
-                            <label class="radio radio--brown">
-                              <input class="visually-hidden radio radio--brown" type="radio" name="jacket-color"
-                              value="brown">
-                            </label>
+                            <input class="radio radio--brown" type="radio" name="jacket-color" value="brown">
+                            <span class="radio__title"></span>
                           </li>
                         </ul>
                       </div>
@@ -205,10 +200,10 @@
                           <li class="size__item size__item--unavailable">l</li>
                           <li class="size__item size__item--unavailable">xl</li>
                         </ul>
-                        <ul class="card__colors color">
+                        <ul class="card__colors color" data-radio>
                           <li class="color__item">
-                            <input class="visually-hidden radio radio--black" type="radio" name="hat-color" id="black">
-                            <label for="black"></label>
+                            <input class="radio radio--black" type="radio" name="hat-color" value="black">
+                            <span class="radio__title"></span>
                           </li>
                         </ul>
                       </div>
@@ -299,19 +294,16 @@
               <h2 class="payment__title title">Оплата</h2>
               <ul class="payment__list" data-radio>
                 <li class="payment__item">
-                  <label class="radio radio--payment">
-                    <input class="radio radio--payment" type="radio" name="payment" value="cash" checked>
-                    Наличными курьеру
-                  </label>
-                  <!-- <label for="cash">Наличными курьеру</label> -->
+                  <input class="radio radio--payment" type="radio" name="payment" value="cash">
+                  <span class="radio__title">Наличными курьеру</span>
                 </li>
                 <li class="payment__item">
-                  <input class="visually-hidden radio radio--payment" type="radio" name="payment" id="card-courier" value="card-courier">
-                  <label for="card-courier">Картой курьеру</label>
+                  <input class="radio radio--payment" type="radio" name="payment" value="card">
+                  <span class="radio__title">Картой курьеру</span>
                 </li>
                 <li class="payment__item">
-                  <input class="visually-hidden radio radio--payment" type="radio" name="payment" id="card-online" value="card-online">
-                  <label for="card-online">Картой онлайн</label>
+                  <input class="radio radio--payment" type="radio" name="payment" value="card-online">
+                  <span class="radio__title">Картой онлайн</span>
                 </li>
               </ul>
             </div>
@@ -319,7 +311,7 @@
               <h2 class="comments__title title">Комментарии к заказу</h2>
               <textarea class="input" name="comment" id="comment-area" rows="7" placeholder="Комментарий к заказу"
                 minlength="0" maxlength="142"></textarea>
-              <p>Использовано <span>0</span>&frasl;<span>142</span> символов</p>
+              <p>Использовано <span id="counter">0</span>&frasl;<span>142</span> символов</p>
             </div>
             <div class="form__map map-canvas">
               <iframe

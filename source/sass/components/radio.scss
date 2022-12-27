@@ -1,158 +1,84 @@
-// .radio {
-//   & + label::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 20px;
-//     height: 20px;
-//     border-radius: 50%;
-//     display: block;
-//     padding: 2px;
-//   }
-
-//   &:hover + label::before {
-//     border: 2px solid $color-white;
-//     box-shadow: 0px 0px 0px 1px $color-very-light-grey;
-//   }
-
-//   &:checked + label::before {
-//     border: 2px solid $color-white;
-//     box-shadow: 0px 0px 0px 1px $color-black;
-//   }
-// }
-
-.radio > input {
-  position: absolute;
-  z-index: -1;
+.radio {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
   opacity: 0;
 }
 
-.radio::before {
+.radio + .radio__title::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  padding: 2px;
   border: 2px solid $color-white;
+  border-radius: 50%;
+  z-index: -1;
 }
 
-.radio::before input:checked {
+.radio--black + .radio__title::before {
+  background-color: $color-charcoal;
+}
+
+.radio--blue + .radio__title::before {
+  background-color: $color-cerulean;
+}
+
+.radio--brown + .radio__title::before {
+  background-color: $color-golden-brown;
+}
+
+.radio:checked + .radio__title::before {
   box-shadow: 0px 0px 0px 1px $color-black;
 }
 
-.radio:hover::before {
-  box-shadow: 0px 0px 0px 1px $color-very-light-grey;
+.radio:hover + .radio__title::before {
+  box-shadow: 0px 0px 0px 1px $color-dim-gray;
+  border: 1px solid $color-white;
 }
-
-.radio--black {
-  &::before {
-    background-color: $color-charcoal;
-  }
-}
-
-.radio--blue {
-  &::before {
-    background-color: $color-cerulean;
-  }
-}
-
-.radio--brown {
-  &::before {
-    background-color: $color-golden-brown;
-  }
-}
-// .radio--black {
-//   & + label::before {
-//     background-color: $color-charcoal;
-//   }
-// }
-
-// .radio--blue {
-//   & + label::before {
-//     background-color: $color-cerulean;
-//   }
-// }
-
-// .radio--brown {
-//   & + label::before {
-//     background-color: $color-golden-brown;
-//   }
-// }
-
 
 .radio--payment {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    padding: 0;
-    border: 1px solid $color-dim-gray;
-  }
+  width: 22px;
+  height: 22px;
+  margin: 0 10px 0 0;
 }
 
-.radio--payment::after input:checked {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: $color-black;
-    box-shadow: none;
+.radio--payment + .radio__title::before {
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 5px solid $color-white;
+  box-shadow: 0px 0px 0px 1px $color-dim-gray;
+  z-index: -1;
 }
 
-// .radio--payment {
-//   & + label::before {
-//     content: "";
-//     position: absolute;
-//     top: 2px;
-//     left: -32px;
-//     width: 22px;
-//     height: 22px;
-//     border-radius: 50%;
-//     display: block;
-//     padding: 0;
-//     border: 1px solid $color-dim-gray;
-//   }
+.radio--payment:hover + .radio__title::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $color-black;
+  z-index: -1;
+}
 
-//   &:checked + label::before {
-//     border: 1px solid $color-dim-gray;
-//     box-shadow: none;
-//   }
+.radio--payment:checked + .radio__title::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $color-black;
+  z-index: -1;
+}
 
-//   &:checked + label::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: -27px;
-//     margin-top: -4px;
-//     width: 12px;
-//     height: 12px;
-//     border-radius: 50%;
-//     background-color: $color-black;
-//   }
-
-//   &:hover + label::before {
-//     border: 1px solid $color-dim-gray;
-//     box-shadow: none;
-//   }
-
-//   &:hover + label::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: -27px;
-//     margin-top: -4px;
-//     width: 12px;
-//     height: 12px;
-//     border-radius: 50%;
-//     background-color: $color-black;
-//   }
-// }
+.radio--payment:checked + .radio__title::before {
+  box-shadow: 0px 0px 0px 1px $color-dim-gray;
+}
