@@ -6,7 +6,7 @@ const validateInput = () => {
   const inputSurname = form.querySelector('#surname');
   const inputEmail = form.querySelector('#email');
   const inputPhone = form.querySelector('#phone');
-  const inputAddress = form.querySelector('#address');
+  const inputAddress = form.querySelector('#suggest');
   const inputPromo = form.querySelector('#promo');
   const btnPromoApply = form.querySelector('#promo-apply');
 
