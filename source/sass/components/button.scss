@@ -107,6 +107,17 @@
     font-weight: 600;
     color: $color-black;
   }
+
+  &--address {
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: $color-dim-gray;
+      fill: none;
+    }
+  }
 }
 
 .button.is-disabled {
