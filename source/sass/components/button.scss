@@ -118,10 +118,15 @@
       fill: none;
     }
   }
+
+  &--disabled {
+    background-color: $color-very-light-grey;
+    color: $color-dim-gray;
+    pointer-events: none;
+  }
 }
 
 .button.is-disabled {
-  background-color: $color-very-light-grey;
 
   &::before,
   &::after {
