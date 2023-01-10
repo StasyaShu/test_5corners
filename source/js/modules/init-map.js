@@ -73,8 +73,6 @@ const initMap = () => {
       });
     }
 
-    var suggest = new ymaps.SuggestView('suggest')
-
     $('#button-address').bind('click', function (e) {
       geocode();
     });
@@ -145,7 +143,7 @@ const initMap = () => {
       placemark.properties.set({ iconCaption: caption, balloonContent: caption });
     }
 
-    map.geoObjects.add(placemark, suggest)
+    map.geoObjects.add(placemark)
   }
 }
 

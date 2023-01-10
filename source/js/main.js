@@ -6,7 +6,7 @@ import {operateQuantity} from './modules/operate-quantity';
 import {manageForm} from './modules/submit-form';
 import {countChar} from './modules/comment-char-counter';
 import {initMap} from './modules/init-map';
-// import {initDadata} from './modules/init-dadata-hints';
+import {initDadata} from './modules/init-dadata-hints';
 
 window.addEventListener('DOMContentLoaded', () => {
   putMask();
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   quantities.forEach(operateQuantity);
 
   initMap();
-  // initDadata();
+  initDadata();
   countChar();
   manageForm();
 })
