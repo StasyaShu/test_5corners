@@ -126,11 +126,26 @@
                         <p class="card__description">Артикул <span>512-05</span></p>
                         <p class="card__description">Сезон <span>Осень-зима</span></p>
                         <ul class="card__measures size">
-                          <li class="size__item">xs</li>
-                          <li class="size__item">s</li>
-                          <li class="size__item size__item--active">m</li>
-                          <li class="size__item">l</li>
-                          <li class="size__item">xl</li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--xs" type="radio" name="jacket-size" value="xs">
+                            <span></span>
+                          </li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--s" type="radio" name="jacket-size" value="s">
+                            <span></span>
+                          </li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--m" type="radio" name="jacket-size" value="m" checked>
+                            <span></span>
+                          </li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--l" type="radio" name="jacket-size" value="l">
+                            <span></span>
+                          </li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--xl" type="radio" name="jacket-size" value="xl">
+                            <span></span>
+                          </li>
                         </ul>
                         <ul class="card__colors color" data-radio>
                           <li class="color__item">
@@ -153,8 +168,8 @@
                     </div>
                     <div class="card__price price">
                       <div class="price__content">
-                        <p class="price__old"><span>12 000</span> &#8381;</p>
-                        <p class="price__now"><span>10 000</span> &#8381;</p>
+                        <p class="price__old"><span class="price-start">12000</span> &#8381;</p>
+                        <p class="price__now"><span class="price-start">10000</span> &#8381;</p>
                       </div>
                       <div class="quantity">
                         <button class="quantity__button button button--reduce" type="button" data-reduce><span
@@ -164,8 +179,8 @@
                             class="visually-hidden">увеличить количество на единицу</span></button>
                       </div>
                       <div class="price__content">
-                        <p class="price__old"><span class="price-number">12 000</span> &#8381;</p>
-                        <p class="price__now"><span class="price-number">10 000</span> &#8381;</p>
+                        <p class="price__old"><span class="price-total">12000</span> &#8381;</p>
+                        <p class="price__now"><span class="price-total">10000</span> &#8381;</p>
                       </div>
                     </div>
                   </div>
@@ -199,11 +214,26 @@
                         <p class="card__description">Артикул <span>891-256</span></p>
                         <p class="card__description">Сезон <span>Демисезон</span></p>
                         <ul class="card__measures size">
-                          <li class="size__item">xs</li>
-                          <li class="size__item size__item--active">s</li>
-                          <li class="size__item ">m</li>
-                          <li class="size__item size__item--disabled">l</li>
-                          <li class="size__item size__item--disabled">xl</li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--xs" type="radio" name="hat-size" value="xs">
+                            <span></span>
+                          </li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--s" type="radio" name="hat-size" value="s" checked>
+                            <span></span>
+                          </li>
+                          <li class="size__item ">
+                            <input class="radio-size radio-size--m" type="radio" name="hat-size" value="m">
+                            <span></span>
+                          </li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--l" type="radio" name="hat-size" value="l" disabled>
+                            <span></span>
+                          </li>
+                          <li class="size__item">
+                            <input class="radio-size radio-size--xl" type="radio" name="hat-size" value="xl" disabled>
+                            <span></span>
+                          </li>
                         </ul>
                         <ul class="card__colors color" data-radio>
                           <li class="color__item">
@@ -216,7 +246,7 @@
                     </div>
                     <div class="card__price price">
                       <div class="price__content">
-                        <p class="price__now"><span>500</span> &#8381;</p>
+                        <p class="price__now"><span class="price-start">500</span> &#8381;</p>
                       </div>
                       <div class="quantity">
                         <button class="quantity__button button button--reduce" type="button" data-reduce><span
@@ -226,7 +256,7 @@
                             class="visually-hidden">увеличить количество на единицу</span></button>
                       </div>
                       <div class="price__content">
-                        <p class="price__now"><span class="price-number">500</span> &#8381;</p>
+                        <p class="price__now"><span class="price-total">500</span> &#8381;</p>
                       </div>
                     </div>
                   </div>

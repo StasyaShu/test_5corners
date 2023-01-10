@@ -1,0 +1,65 @@
+.radio-size {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+}
+
+.radio-size + span::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  border-radius: 6px;
+  text-transform: uppercase;
+  background-color: $color-white-smoke;
+  color: $color-black;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding-top: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  z-index: -1;
+}
+
+.radio-size:hover + span::before {
+  background-color: $color-very-light-grey;
+  color: $color-black;
+  transition: all $trans-03;
+}
+
+.radio-size:checked + span::before {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.radio-size:disabled {
+  pointer-events: none;
+}
+
+.radio-size:disabled + span::before {
+  color: $color-very-light-grey;
+}
+
+.radio-size--xs + span::before {
+  content: "xs";
+}
+
+.radio-size--s + span::before {
+  content: "s";
+}
+
+.radio-size--m + span::before {
+  content: "m";
+}
+
+.radio-size--l + span::before {
+  content: "l";
+}
+
+.radio-size--xl + span::before {
+  content: "xl";
+}

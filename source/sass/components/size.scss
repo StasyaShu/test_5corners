@@ -15,34 +15,8 @@
   }
 
   &__item {
-    cursor: pointer;
     width: 30px;
     height: 30px;
-    border-radius: 6px;
-    text-transform: uppercase;
-    background-color: $color-white-smoke;
-    color: $color-black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-
-    &:hover {
-      background-color: $color-very-light-grey;
-      color: $color-black;
-    }
-  }
-
-  &__item--active {
-    background-color: $color-black;
-    color: $color-white;
-  }
-
-  &__item--disabled {
-    color: $color-very-light-grey;
-    pointer-events: none;
+    position: relative;
   }
 }
