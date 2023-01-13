@@ -55,10 +55,10 @@ const validateInput = () => {
   })
 
   inputAddress.addEventListener('focus', () => {
-    form.querySelector('label[for="address"]').style.display = 'block';
+    form.querySelector('label[for="suggest"]').style.display = 'block';
   })
   inputAddress.addEventListener('blur', () => {
-    form.querySelector('label[for="address"]').style.display = 'none';
+    form.querySelector('label[for="suggest"]').style.display = 'none';
   })
   inputAddress.addEventListener('input', () => { inputAddress.value == '' ? btnAddress.style.display = 'none' : btnAddress.style.display = 'block' });
 

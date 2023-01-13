@@ -2,4 +2,8 @@
   background-color: $color-white-smoke;
   width: 100%;
   height: auto;
+
+  @include mobile {
+    height: 220px;
+  }
 }

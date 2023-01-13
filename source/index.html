@@ -3,13 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Тестовое задание на вакансию HTML-верстальщик: Выполнила Шулепова С.В.">
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/helvetica-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/helvetica-bold.woff2" as="font" crossorigin>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=a79aeb88-a67d-4a2e-862d-2eca92ec17fe&lang=ru_RU"
-    type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a79aeb88-a67d-4a2e-862d-2eca92ec17fe&lang=ru_RU">
     </script>
   <title>Тестовое задание от компании 5 углов.</title>
 </head>
@@ -99,263 +98,275 @@
         </div>
       </div>
       <section class="order">
+        <h2 class="visually-hidden">Оформление заказа</h2>
         <div class="order__wrapper">
           <form class="order__form form" action="https://echo.htmlacademy.ru" enctype="multipart/form-data"
             method="post" id="order-form">
-            <div class="form__header">
-              <h2 class="form__title">Оформление заказа</h2>
-              <p class="form__have-account">Есть аккаунт?</p>
-              <a href="#" class="form__account-link" aria-label="Войти в личный кабинет">Войти</a>
-            </div>
-            <b class="form__count-goods title"><span>3</span> товара на сумму <span>25 000</span> &#8381;</b>
-            <div class="form__cards cards">
-              <ul class="cards__list">
-                <li class="cards__item card">
-                  <div class="card__wrapper">
-                    <button type="button" class="card__button button button--close" data-button-delete></button>
-                    <div class="card__image">
-                      <picture>
-                        <source type="image/webp" media="(max-width: 767px)"
-                          srcset="img/img-jacket-mobile@1x.webp 1x, img/img-jacket-mobile@2x.webp 2x">
-                        <img src="img/img-jacket-desktop@1x.jpg" srcset="img/img-jacket-desktop@2x.jpg 2x" width="130"
-                          height="160" alt="Утепленная стеганная куртка женская Top Hills">
-                      </picture>
-                      <a href="#" class="card__title" aria-label="Перейти в товар">Утепленная стеганная куртка женская
-                        Top Hills</a>
-                      <div class="card__info">
-                        <p class="card__description">Артикул <span>512-05</span></p>
-                        <p class="card__description">Сезон <span>Осень-зима</span></p>
-                        <ul class="card__measures size">
-                          <li class="size__item">
-                            <input class="radio-size radio-size--xs" type="radio" name="jacket-size" value="xs">
-                            <span></span>
-                          </li>
-                          <li class="size__item">
-                            <input class="radio-size radio-size--s" type="radio" name="jacket-size" value="s">
-                            <span></span>
-                          </li>
-                          <li class="size__item">
-                            <input class="radio-size radio-size--m" type="radio" name="jacket-size" value="m" checked>
-                            <span></span>
-                          </li>
-                          <li class="size__item">
-                            <input class="radio-size radio-size--l" type="radio" name="jacket-size" value="l">
-                            <span></span>
-                          </li>
-                          <li class="size__item">
-                            <input class="radio-size radio-size--xl" type="radio" name="jacket-size" value="xl">
-                            <span></span>
-                          </li>
-                        </ul>
-                        <ul class="card__colors color" data-radio>
-                          <li class="color__item">
-                            <input class="radio radio--black" type="radio" name="jacket-color" value="black"
-                              data-color="black" checked>
-                            <span class="radio__title"></span>
-                          </li>
-                          <li class="color__item">
-                            <input class="radio radio--blue" type="radio" name="jacket-color" value="blue"
-                              data-color="blue">
-                            <span class="radio__title"></span>
-                          </li>
-                          <li class="color__item">
-                            <input class="radio radio--brown" type="radio" name="jacket-color" value="brown"
-                              data-color="brown">
-                            <span class="radio__title"></span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="card__price price">
-                      <div class="price__content">
-                        <p class="price__old"><span class="price-start-old" data-format-number>12000</span> &#8381;</p>
-                        <p class="price__now"><span class="price-start-now" data-format-number>10000</span> &#8381;</p>
-                      </div>
-                      <div class="quantity">
-                        <button class="quantity__button button button--reduce" type="button" data-reduce><span
-                            class="visually-hidden">уменьшить количество на единицу</span></button>
-                        <input class="quantity__value" type="text" name="jacket-quantity" value="1">
-                        <button class="quantity__button button button--add" type="button" data-add><span
-                            class="visually-hidden">увеличить количество на единицу</span></button>
-                      </div>
-                      <div class="price__content">
-                        <p class="price__old"><span class="price-total-old" data-format-number>12000</span> &#8381;</p>
-                        <p class="price__now"><span class="price-total-now" data-format-number>10000</span> &#8381;</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="cards__item card card--deleted">
-                  <div class="card__wrapper">
-                    <div class="card__content">
-                      <p>Товар <a href="#" aria-label="Перейти в товар">Наименование товара</a> был удален из корзины.
-                      </p>
-                      <a href="#" class="card__link-restore" aria-label="Восстановить товар из корзины">Восстановить</a>
-                      <button type="button" class="card__button button button--close" data-button-delete><span
-                          class="visually-hidden">удалить товар из
-                          корзины</span></button>
-                    </div>
-                  </div>
-                </li>
-                <li class="cards__item card">
-                  <div class="card__wrapper">
-                    <button type="button" class="card__button button button--close" data-button-delete><span
-                        class="visually-hidden">удалить
-                        товар из корзины</span></button>
-                    <div class="card__image">
-                      <picture>
-                        <source type="image/webp" media="(max-width: 767px)"
-                          srcset="img/img-hat-mobile@1x.webp 1x, img/img-hat-mobile@2x.webp 2x">
-                        <img src="img/img-hat-desktop@1x.jpg" srcset="img/img-hat-desktop@2x.jpg 2x" width="130"
-                          height="160" alt="Вязанная шапка Zolla">
-                      </picture>
-                      <a href="#" class="card__title" aria-label="Перейти в товар">Вязанная шапка Zolla</a>
-                      <div class="card__info">
-                        <p class="card__description">Артикул <span>891-256</span></p>
-                        <p class="card__description">Сезон <span>Демисезон</span></p>
-                        <ul class="card__measures size">
-                          <li class="size__item">
-                            <input class="radio-size radio-size--xs" type="radio" name="hat-size" value="xs">
-                            <span></span>
-                          </li>
-                          <li class="size__item">
-                            <input class="radio-size radio-size--s" type="radio" name="hat-size" value="s" checked>
-                            <span></span>
-                          </li>
-                          <li class="size__item ">
-                            <input class="radio-size radio-size--m" type="radio" name="hat-size" value="m">
-                            <span></span>
-                          </li>
-                          <li class="size__item">
-                            <input class="radio-size radio-size--l" type="radio" name="hat-size" value="l" disabled>
-                            <span></span>
-                          </li>
-                          <li class="size__item">
-                            <input class="radio-size radio-size--xl" type="radio" name="hat-size" value="xl" disabled>
-                            <span></span>
-                          </li>
-                        </ul>
-                        <ul class="card__colors color" data-radio>
-                          <li class="color__item">
-                            <input class="radio radio--black" type="radio" name="hat-color" value="black"
-                              data-color="black" checked>
-                            <span class="radio__title"></span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="card__price price">
-                      <div class="price__content">
-                        <p class="price__now"><span class="price-start-now" data-format-number>500</span> &#8381;</p>
-                      </div>
-                      <div class="quantity">
-                        <button class="quantity__button button button--reduce" type="button" data-reduce><span
-                            class="visually-hidden">уменьшить количество на единицу</span></button>
-                        <input class="quantity__value" type="text" name="hat-quantity" value="1">
-                        <button class="quantity__button button button--add" type="button" data-add><span
-                            class="visually-hidden">увеличить количество на единицу</span></button>
-                      </div>
-                      <div class="price__content">
-                        <p class="price__now"><span class="price-total-now" data-format-number>500</span> &#8381;</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="form__total total">
-              <div class="total__wrapper">
-                <ul class="total__list">
-                  <li class="total__item">Товары <span>24&nbsp;500&nbsp;&#8381;</span></li>
-                  <li class="total__item total__item--discount">Скидка <span>-&nbsp;4&nbsp;500&nbsp;&#8381;</span></li>
-                  <li class="total__item total__item--additional">Акции <span>-&nbsp;4&nbsp;000&nbsp;&#8381;</span></li>
-                  <li class="total__item total__item--additional">Промокод <span>-&nbsp;500&nbsp;&#8381;</span></li>
-                  <li class="total__item">Доставка <span>200&nbsp;&#8381;</span></li>
-                </ul>
-                <div class="total__from-warehouse">
-                  <p>Получить товар со склада
-                    <span>Сроки получения могут измениться</span>
-                  </p>
-                  <button class="toggle" type="button"><span class="visually-hidden">Включить услугу получить товар со
-                      склада</span></button>
-                </div>
-                <div class="total__sum">
-                  <p>Итого: <span>20&nbsp;700</span><span>&nbsp;&#8381;</span></p>
-                  <input class="input" type="text" name="promo" id="promo" placeholder="Введите промокод">
-                  <button class="button button--promo" type="button" id="promo-apply">Применить</button>
-                  <div class="error"></div>
-                </div>
-                <button class="total__button button button--submit" type="submit" id="button-submit">Оформить
-                  заказ</button>
-                <span class="total__policy">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с <a href="#"
-                    aria-label="Ссылка на Политику конфиденциальности">политикой конфиденциальности</a>.</span>
+            <section class="goods">
+              <div class="goods__header">
+                <h2 class="goods__title">Оформление заказа</h2>
+                <p class="goods__have-account">Есть аккаунт?</p>
+                <a href="#" class="goods__account-link" aria-label="Войти в личный кабинет">Войти</a>
               </div>
-            </div>
-            <div class="form__personal-data contacts">
-              <h2 class="contacts__title title">Контактные данные</h2>
-              <ul class="contacts__list">
-                <li class="contacts__item">
-                  <input class="input" type="text" id="name" name="name" data-name placeholder="Имя"
-                    pattern="^[А-Яа-яЁёA-za-z\s\D]+$" required>
-                  <label for="name">Имя</label>
-                  <div class="error"></div>
-                </li>
-                <li class="contacts__item">
-                  <input class="input" type="text" id="surname" name="surname" data-name placeholder="Фамилия"
-                    pattern="^[А-Яа-яЁёA-za-z\s\D]+$" required>
-                  <label for="name">Фамилия</label>
-                  <div class="error"></div>
-                </li>
-                <li class="contacts__item">
-                  <input class="input" type="text" id="phone" name="phone" placeholder="Телефон" required>
-                  <label for="phone">Телефон</label>
-                  <div class="error"></div>
-                </li>
-                <li class="contacts__item">
-                  <input class="input" type="text" id="email" name="email" placeholder="Email"
-                    pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" required>
-                  <label for="email">Email</label>
-                  <div class="error"></div>
-                </li>
-                <li class="contacts__item contacts__item--address">
-                  <input class="input address" type="text" id="suggest" name="address" placeholder="Адрес доставки" required>
-                  <label for="address">Адрес доставки</label>
-                  <button class="button button--address" type="button" id="button-address"><span
-                      class="visually-hidden">поиск по
-                      карте</span>
-                    <svg width="20" height="20" viewBox="0 0 18 18">
-                      <use xlink:href="img/sprite.svg#icon-search"></use>
-                    </svg>
-                  </button>
-                  <!-- <p id="notice">Адрес не найден</p> -->
-                  <div class="error" id="error"></div>
-                </li>
-              </ul>
-            </div>
-            <div class="form__payment payment">
-              <h2 class="payment__title title">Оплата</h2>
-              <ul class="payment__list" data-radio>
-                <li class="payment__item">
-                  <input class="radio radio--payment" type="radio" name="payment" value="cash">
-                  <span class="radio__title">Наличными курьеру</span>
-                </li>
-                <li class="payment__item">
-                  <input class="radio radio--payment" type="radio" name="payment" value="card">
-                  <span class="radio__title">Картой курьеру</span>
-                </li>
-                <li class="payment__item">
-                  <input class="radio radio--payment" type="radio" name="payment" value="card-online" checked>
-                  <span class="radio__title">Картой онлайн</span>
-                </li>
-              </ul>
-            </div>
-            <div class="form__comments comments">
-              <h2 class="comments__title title">Комментарии к заказу</h2>
-              <textarea class="input" name="comment" id="comment-area" rows="7" placeholder="Комментарий к заказу"
-                minlength="0" maxlength="142"></textarea>
-              <p>Использовано <span id="counter">0</span>&frasl;<span>142</span> символов</p>
-            </div>
-            <div class="form__map map-canvas" id="map"></div>
+              <b class="goods__count-goods title"><span>3</span> товара на сумму <span>25 000</span> &#8381;</b>
+              <div class="goods__cards cards">
+                <ul class="cards__list">
+                  <li class="cards__item card">
+                    <div class="card__wrapper">
+                      <button type="button" class="card__button button button--close" data-button-delete><span class="visually-hidden">Удалить товар из корзины</span></button>
+                      <div class="card__image">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 767px)"
+                            srcset="img/img-jacket-mobile@1x.webp 1x, img/img-jacket-mobile@2x.webp 2x">
+                          <img src="img/img-jacket-desktop@1x.jpg" srcset="img/img-jacket-desktop@2x.jpg 2x" width="130"
+                            height="160" alt="Утепленная стеганная куртка женская Top Hills">
+                        </picture>
+                        <a href="#" class="card__title" aria-label="Перейти в товар">Утепленная стеганная куртка женская
+                          Top Hills</a>
+                        <div class="card__info">
+                          <p class="card__description">Артикул <span>512-05</span></p>
+                          <p class="card__description">Сезон <span>Осень-зима</span></p>
+                          <ul class="card__measures size">
+                            <li class="size__item">
+                              <input class="radio-size radio-size--xs" type="radio" name="jacket-size" value="xs" aria-labelledby="Размер XS">
+                              <span></span>
+                            </li>
+                            <li class="size__item">
+                              <input class="radio-size radio-size--s" type="radio" name="jacket-size" value="s" aria-labelledby="Размер S">
+                              <span></span>
+                            </li>
+                            <li class="size__item">
+                              <input class="radio-size radio-size--m" type="radio" name="jacket-size" value="m" aria-labelledby="Размер M" checked>
+                              <span></span>
+                            </li>
+                            <li class="size__item">
+                              <input class="radio-size radio-size--l" type="radio" name="jacket-size" value="l" aria-labelledby="Размер L">
+                              <span></span>
+                            </li>
+                            <li class="size__item">
+                              <input class="radio-size radio-size--xl" type="radio" name="jacket-size" value="xl" aria-labelledby="Размер XL">
+                              <span></span>
+                            </li>
+                          </ul>
+                          <ul class="card__colors color" data-radio>
+                            <li class="color__item">
+                              <input class="radio radio--black" type="radio" name="jacket-color" value="black"
+                                data-color="black" aria-labelledby="Цвет чёрный" checked>
+                              <span></span>
+                            </li>
+                            <li class="color__item">
+                              <input class="radio radio--blue" type="radio" name="jacket-color" value="blue"
+                                data-color="blue" aria-labelledby="Цвет синий">
+                              <span></span>
+                            </li>
+                            <li class="color__item">
+                              <input class="radio radio--brown" type="radio" name="jacket-color" value="brown"
+                                data-color="brown" aria-labelledby="Цвет коричневый">
+                              <span></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card__price price">
+                        <div class="price__content">
+                          <p class="price__old"><span class="price-start-old" data-format-number>12000</span> &#8381;
+                          </p>
+                          <p class="price__now"><span class="price-start-now" data-format-number>10000</span> &#8381;
+                          </p>
+                        </div>
+                        <div class="quantity">
+                          <button class="quantity__button button button--reduce" type="button" data-reduce><span
+                              class="visually-hidden">уменьшить количество на единицу</span></button>
+                          <input class="quantity__value" type="text" name="jacket-quantity" value="1" aria-labelledby="Количество товара">
+                          <button class="quantity__button button button--add" type="button" data-add><span
+                              class="visually-hidden">увеличить количество на единицу</span></button>
+                        </div>
+                        <div class="price__content">
+                          <p class="price__old"><span class="price-total-old" data-format-number>12000</span> &#8381;
+                          </p>
+                          <p class="price__now"><span class="price-total-now" data-format-number>10000</span> &#8381;
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards__item card card--deleted">
+                    <div class="card__wrapper">
+                      <div class="card__content">
+                        <p>Товар <a href="#" aria-label="Перейти в товар">Наименование товара</a> был удален из корзины.
+                        </p>
+                        <a href="#" class="card__link-restore"
+                          aria-label="Восстановить товар из корзины">Восстановить</a>
+                        <button type="button" class="card__button button button--close" data-button-delete><span
+                            class="visually-hidden">удалить товар из
+                            корзины</span></button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards__item card">
+                    <div class="card__wrapper">
+                      <button type="button" class="card__button button button--close" data-button-delete><span
+                          class="visually-hidden">удалить
+                          товар из корзины</span></button>
+                      <div class="card__image">
+                        <picture>
+                          <source type="image/webp" media="(max-width: 767px)"
+                            srcset="img/img-hat-mobile@1x.webp 1x, img/img-hat-mobile@2x.webp 2x">
+                          <img src="img/img-hat-desktop@1x.jpg" srcset="img/img-hat-desktop@2x.jpg 2x" width="130"
+                            height="160" alt="Вязанная шапка Zolla">
+                        </picture>
+                        <a href="#" class="card__title" aria-label="Перейти в товар">Вязанная шапка Zolla</a>
+                        <div class="card__info">
+                          <p class="card__description">Артикул <span>891-256</span></p>
+                          <p class="card__description">Сезон <span>Демисезон</span></p>
+                          <ul class="card__measures size">
+                            <li class="size__item">
+                              <input class="radio-size radio-size--xs" type="radio" name="hat-size" value="xs" aria-labelledby="Размер XS">
+                              <span></span>
+                            </li>
+                            <li class="size__item">
+                              <input class="radio-size radio-size--s" type="radio" name="hat-size" value="s" aria-labelledby="Размер S" checked>
+                              <span></span>
+                            </li>
+                            <li class="size__item ">
+                              <input class="radio-size radio-size--m" type="radio" name="hat-size" value="m" aria-labelledby="Размер M">
+                              <span></span>
+                            </li>
+                            <li class="size__item">
+                              <input class="radio-size radio-size--l" type="radio" name="hat-size" value="l" aria-labelledby="Размер L" disabled>
+                              <span></span>
+                            </li>
+                            <li class="size__item">
+                              <input class="radio-size radio-size--xl" type="radio" name="hat-size" value="xl" aria-labelledby="Размер XL" disabled>
+                              <span></span>
+                            </li>
+                          </ul>
+                          <ul class="card__colors color" data-radio>
+                            <li class="color__item">
+                              <input class="radio radio--black" type="radio" name="hat-color" value="black"
+                                data-color="black" aria-labelledby="Цвет чёрный" checked>
+                              <span></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="card__price price">
+                        <div class="price__content">
+                          <p class="price__now"><span class="price-start-now" data-format-number>500</span> &#8381;</p>
+                        </div>
+                        <div class="quantity">
+                          <button class="quantity__button button button--reduce" type="button" data-reduce><span
+                              class="visually-hidden">уменьшить количество на единицу</span></button>
+                          <input class="quantity__value" type="text" name="hat-quantity" value="1" aria-labelledby="Количество товара">
+                          <button class="quantity__button button button--add" type="button" data-add><span
+                              class="visually-hidden">увеличить количество на единицу</span></button>
+                        </div>
+                        <div class="price__content">
+                          <p class="price__now"><span class="price-total-now" data-format-number>500</span> &#8381;</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="goods__total total">
+                <div class="total__wrapper">
+                  <ul class="total__list">
+                    <li class="total__item">Товары <span>24&nbsp;500&nbsp;&#8381;</span></li>
+                    <li class="total__item total__item--discount">Скидка <span>-&nbsp;4&nbsp;500&nbsp;&#8381;</span>
+                    </li>
+                    <li class="total__item total__item--additional">Акции <span>-&nbsp;4&nbsp;000&nbsp;&#8381;</span>
+                    </li>
+                    <li class="total__item total__item--additional">Промокод <span>-&nbsp;500&nbsp;&#8381;</span></li>
+                    <li class="total__item">Доставка <span>200&nbsp;&#8381;</span></li>
+                  </ul>
+                  <div class="total__from-warehouse">
+                    <p>Получить товар со склада
+                      <span>Сроки получения могут измениться</span>
+                    </p>
+                    <button class="toggle" type="button"><span class="visually-hidden">Включить услугу получить товар со
+                        склада</span></button>
+                  </div>
+                  <div class="total__sum">
+                    <p>Итого: <span>20&nbsp;700</span><span>&nbsp;&#8381;</span></p>
+                    <input class="input" type="text" name="promo" id="promo" placeholder="Введите промокод">
+                    <button class="button button--promo" type="button" id="promo-apply">Применить</button>
+                    <div class="error"></div>
+                  </div>
+                  <button class="total__button button button--submit" type="submit" id="button-submit">Оформить
+                    заказ</button>
+                  <span class="total__policy">Нажимая кнопку “Оформить заказ”, Вы соглашаетесь с <a href="#"
+                      aria-label="Ссылка на Политику конфиденциальности">политикой конфиденциальности</a>.</span>
+                </div>
+              </div>
+            </section>
+            <section class="data">
+              <div class="data__personal-data contacts">
+                <h2 class="contacts__title title">Контактные данные</h2>
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <input class="input" type="text" id="name" name="name" data-name placeholder="Имя"
+                      pattern="^[А-Яа-яЁёA-za-z\s\D]+$" required>
+                    <label for="name">Имя</label>
+                    <div class="error"></div>
+                  </li>
+                  <li class="contacts__item">
+                    <input class="input" type="text" id="surname" name="surname" data-name placeholder="Фамилия"
+                      pattern="^[А-Яа-яЁёA-za-z\s\D]+$" required>
+                    <label for="name">Фамилия</label>
+                    <div class="error"></div>
+                  </li>
+                  <li class="contacts__item">
+                    <input class="input" type="text" id="phone" name="phone" placeholder="Телефон" required>
+                    <label for="phone">Телефон</label>
+                    <div class="error"></div>
+                  </li>
+                  <li class="contacts__item">
+                    <input class="input" type="text" id="email" name="email" placeholder="Email"
+                      pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" required>
+                    <label for="email">Email</label>
+                    <div class="error"></div>
+                  </li>
+                  <li class="contacts__item contacts__item--address">
+                    <input class="input address" type="text" id="suggest" name="address" placeholder="Адрес доставки"
+                      required>
+                    <label for="suggest">Адрес доставки</label>
+                    <button class="button button--address" type="button" id="button-address"><span
+                        class="visually-hidden">поиск по
+                        карте</span>
+                      <svg width="20" height="20" viewBox="0 0 18 18">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>
+                    </button>
+                    <div class="error" id="error"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="data__payment payment">
+                <h2 class="payment__title title">Оплата</h2>
+                <ul class="payment__list" data-radio>
+                  <li class="payment__item">
+                    <input class="radio radio--payment" type="radio" name="payment" value="cash" aria-labelledby="Оплата наличными">
+                    <span>Наличными курьеру</span>
+                  </li>
+                  <li class="payment__item">
+                    <input class="radio radio--payment" type="radio" name="payment" value="card" aria-labelledby="Оплата картой курьеру">
+                    <span>Картой курьеру</span>
+                  </li>
+                  <li class="payment__item">
+                    <input class="radio radio--payment" type="radio" name="payment" value="card-online" aria-labelledby="Оплата картой онлайн" checked>
+                    <span>Картой онлайн</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="data__comments comments">
+                <h2 class="comments__title title">Комментарии к заказу</h2>
+                <textarea class="input" name="comment" id="comment-area" rows="7" placeholder="Комментарий к заказу"
+                  minlength="0" maxlength="142"></textarea>
+                <p>Использовано <span id="counter">0</span>&frasl;<span>142</span> символов</p>
+              </div>
+              <div class="data__map map-canvas" id="map"></div>
+            </section>
           </form>
         </div>
       </section>
