@@ -1,3 +1,4 @@
+import {initSmoothScroll} from './modules/smooth-scroll';
 import {putMask} from './modules/init-masks';
 import {validateInput} from './modules/validate';
 import {manageMobMenu} from './modules/init-mobile-menu';
@@ -10,6 +11,7 @@ import {initDadata} from './modules/init-dadata-hints';
 import {manageForm} from './modules/submit-form';
 
 window.addEventListener('DOMContentLoaded', () => {
+  initSmoothScroll();
   putMask();
   validateInput();
   countChar();

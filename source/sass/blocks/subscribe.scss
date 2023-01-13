@@ -1,0 +1,50 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+
+  b {
+    margin: 0 0 40px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 30px;
+    color: $color-black;
+  }
+
+  input {
+    margin: 0 0 10px;
+    width: 100%;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-dim-gray;
+
+    a {
+      text-decoration: underline;
+      color: $color-dim-gray;
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    button {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin: 0 11px 0 0;
+      fill: none;
+      color: $color-dim-gray;
+    }
+  }
+}

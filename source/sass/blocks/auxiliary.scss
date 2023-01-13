@@ -1,0 +1,19 @@
+.auxiliary {
+  list-style: none;
+  padding: 0;
+  margin: 0 116px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 28px;
+
+  &__item {
+    margin: 0 0 10px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-black;
+  }
+}

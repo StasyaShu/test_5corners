@@ -1,0 +1,48 @@
+.footer {
+  display: none;
+  width: 100%;
+  border-top: 1px solid $color-very-light-grey;
+
+  &__wrapper {
+    position: relative;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 0.46fr 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 100px;
+  }
+
+  &__copyright {
+    width: 100%;
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__auxiliary {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  &__link-up {
+    position: absolute;
+    top: -51px;
+    right: 0;
+    color: $color-very-light-grey;
+    transition: color $trans-03;
+
+    svg {
+      fill: none;
+    }
+
+    &:hover {
+      color: $color-dim-gray;
+      transition: color $trans-03;
+    }
+  }
+}
