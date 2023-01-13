@@ -209,9 +209,9 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
+    scripts,
     sprite,
     createWebp,
-    scripts,
   ),
   gulp.series(
     server,
